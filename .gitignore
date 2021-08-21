@@ -1,5 +1,4 @@
-data/owners.json
-data/token.json
+data/
 .idea
 events/__pycache__
 commands/__pycache__

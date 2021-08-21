@@ -5,7 +5,7 @@ from discord.ext import commands
 
 
 def get_prefix(client, message):
-    with open('data/prefixes.json', 'r') as f:
+    with open('serverconfig/prefixes.json', 'r') as f:
         prefixes = json.load(f)
 
     return prefixes[str(message.guild.id)]

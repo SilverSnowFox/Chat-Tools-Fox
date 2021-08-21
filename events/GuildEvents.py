@@ -9,12 +9,12 @@ class GuildEvents(commands.Cog):
     # Add guild to prefix list
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        with open('data/prefixes.json', 'r') as f:
+        with open('serverconfig/prefixes.json', 'r') as f:
             prefixes = json.load(f)
 
         prefixes[str(guild.id)] = "="
 
-        with open('data/prefixes.json', 'w') as f:
+        with open('serverconfig/prefixes.json', 'w') as f:
             json.dump(prefixes, f, indent=4)
 
     # Remove guild from prefix list

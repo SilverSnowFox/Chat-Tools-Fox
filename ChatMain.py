@@ -11,7 +11,7 @@ def get_prefix(client, message):
     return prefixes[str(message.guild.id)]
 
 
-client = commands.Bot(command_prefix=get_prefix)
+client = commands.Bot(command_prefix=commands.when_mentioned_or(get_prefix))
 
 # Load commands and events
 for filename in os.listdir('commands/'):

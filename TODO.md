@@ -80,19 +80,11 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 
 ### Admin
 - [ ] Create muted role or set it up
-- [ ] Kick command with reason
-  - Check if user has permissions
-  - Check if can kick the person
-- [ ] Ban command with reason
-  - Check if user has permissions
-  - Check if can kick the person
 - [ ] Mute with reason and time (or none)
   - Need to check if muted role exists
   - Need valid time
   - Need to be able to give person role
   - Need to check if mute works
-- [ ] Unban
-  - Check if user exists or is banned
 - [ ] Un-mute
   - Check is person has muted role
   - Remove muted role

@@ -1,0 +1,12 @@
+{
+   "main": {
+      "color": 3974125,
+      "title": "Help Menu",
+      "description": "Use the select menu below to choose your category"
+   },
+   "utilities": {
+      "color": 3974125,
+      "title": "Help Menu - Utilities",
+      "description": ""
+   }
+}

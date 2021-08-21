@@ -1,0 +1,5 @@
+data/owners.json
+data/token.json
+.idea
+events/__pycache__
+commands/__pycache__

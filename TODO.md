@@ -10,10 +10,9 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
   - [ ] Button with invite
 
 ### Utilities
-- [ ] Voting Command
-- [ ] Invite Command
-- [ ] Bot information
-- [ ] Check bot permissions
+- [x] Voting Command
+- [x] Invite Command
+- [x] Bot information
 - [ ] User information
 - [ ] Server information
 - [ ] Mention to get server prefix
@@ -23,6 +22,7 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 - [ ] Word whitelisting, delete message and send warn embed
 - [ ] Change prefixes
 - [ ] Change languages
+- [ ] Anti-scam
 
 ### Chat creation and editing
 - [ ] Channel creating
@@ -112,8 +112,8 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 Need to check if possible to make a channel where sends messages with random gen, or number with increasing index using webhook and generic avatar.
 
 ### Background
-- [ ] Prefixes SQL
-- [ ] Languages SQL
+- [x] Prefixes JSON
+- [x] Languages JSON
 - [ ] Server channels SQL
 - [ ] EN Embeds
   - [ ] Help
@@ -123,3 +123,4 @@ Need to check if possible to make a channel where sends messages with random gen
   - [ ] Help
   - [ ] Commands
   - [ ] Errors
+- [ ] Add custom emotes for commands

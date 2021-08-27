@@ -1,0 +1,12 @@
+{
+   "list": {
+      "title": "Language",
+      "color": 3974125,
+      "description": "Pick your language\nEscoge tu idioma"
+   },
+   "change": {
+      "title": "Language",
+      "color": 3974125,
+      "description": "Language changed to English"
+   }
+}

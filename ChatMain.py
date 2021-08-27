@@ -11,12 +11,13 @@ def get_prefix(client, message):
     return prefixes[str(message.guild.id)]
 
 
-client = commands.Bot(command_prefix=commands.when_mentioned_or(get_prefix))
+client = commands.Bot(command_prefix=get_prefix)
 
 # Load commands and events
-for filename in os.listdir('commands/'):
-    if filename.endswith('.py'):
-        client.load_extension(f'commands.{filename[:-3]}')
+for category in os.listdir('commands/'):
+    for filename in os.listdir(f'commands/{category}/'):
+        if filename.endswith('.py'):
+            client.load_extension(f'commands.{category}.{filename[:-3]}')
 
 for filename in os.listdir('events/'):
     if filename.endswith('.py'):
@@ -25,10 +26,10 @@ for filename in os.listdir('events/'):
 
 # Cog load, reload and unload
 @client.command(aliases=["Cog"])
-async def cog(ctx, action, category, extension):
+async def cog(ctx, action, type, category, extension):
 
     # To check that cog exists
-    if not os.path.isfile(f"{category}/{extension}.py"):
+    if not os.path.isfile(f"{type}/{category}/{extension}.py"):
         await ctx.send("Cog doesn't exist.")
         return
 
@@ -42,14 +43,14 @@ async def cog(ctx, action, category, extension):
 
         # Checks for each Cog action. If use one cog more than the other can change their order.
         if action == "reload":
-            client.unload_extension(f'{category}.{extension}')
-            client.load_extension(f'{category}.{extension}')
+            client.unload_extension(f'{type}.{category}.{extension}')
+            client.load_extension(f'{type}.{category}.{extension}')
             await ctx.send(f"Cog {extension} reloaded")
         elif action == "load":
-            client.load_extension(f'{category}.{extension}')
+            client.load_extension(f'{type}.{category}.{extension}')
             await ctx.send(f"Cog {extension} loaded.")
         elif action == "unload":
-            client.unload_extension(f'{category}.{extension}')
+            client.unload_extension(f'{type}.{category}.{extension}')
             await ctx.send(f"Cog {extension} unloaded.")
         else:
             await ctx.send("That cog action doesn't exist.")

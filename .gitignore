@@ -1,4 +1,7 @@
 data/
 .idea
 events/__pycache__
+functions/__pycache__
 commands/__pycache__
+commands/admin/__pycache__
+commands/utilities/__pycache__

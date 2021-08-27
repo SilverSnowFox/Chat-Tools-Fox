@@ -1,0 +1,7 @@
+{
+   "admin-manage": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Administrador` o `Gestionar Servidor` para cambiar el idioma."
+   }
+}

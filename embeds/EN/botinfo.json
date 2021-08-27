@@ -1,0 +1,10 @@
+{
+   "embed": {
+      "title": "Bot information",
+      "color": 3974125
+   },
+   "fields": [
+      "Bot Name (ID)", "Prefix", "Latency", "Servers", "Uptime", "Developer", "Translators"
+   ],
+   "button": "Invite me!"
+}

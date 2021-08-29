@@ -25,7 +25,7 @@ class Botinfo(commands.Cog):
             prefix = prefixes[str(ctx.message.guild.id)]
 
         embed = discord.Embed.from_dict(botcategories['embed'])
-        embed.add_field(name=botcategories['fields'][0], value=f"{self.client.user.discriminator} ({self.client.user.id})")
+        embed.add_field(name=botcategories['fields'][0], value=f"{self.client.user.name}#{self.client.user.discriminator} ({self.client.user.id})", inline=False)
         embed.add_field(name=botcategories['fields'][1], value=prefix)
         embed.add_field(name=botcategories['fields'][2], value=f"{round(self.client.latency * 1000)} ms")
         embed.add_field(name=botcategories['fields'][3], value=f"{len(self.client.guilds)}")
@@ -34,11 +34,11 @@ class Botinfo(commands.Cog):
         embed.add_field(name=botcategories['fields'][6], value=":flag_ca: - SevenTails#7757\n:flag_es: - SevenTails#7757", inline=False)
         embed.set_thumbnail(url=self.client.user.avatar_url)
 
-        await ctx.send(embed=embed, components=[Button(
+        await ctx.reply(embed=embed, components=[Button(
             label=botcategories['button'],
             url="https://discord.com/api/oauth2/authorize?client_id=878533674042294292&permissions=8&scope=bot",
             style=ButtonStyle.url
-        )])
+        )], mention_author=False)
 
 
 def setup(client):

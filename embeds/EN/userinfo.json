@@ -8,9 +8,9 @@
       "Status",
       "Activity",
       "Bot?",
+      "Nickname",
       "Created at",
       "Joined at",
-      "Roles",
-      "Boosting"
+      "Roles"
    ]
 }

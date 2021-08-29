@@ -1,0 +1,11 @@
+{
+   "single": {
+      "title": "Invitaciones",
+      "color": 3974125,
+      "description": "%USER tiene `%LINKS` invitaciones:\n%INVITES"
+   },
+   "top25": {
+      "title": "Top 25 invitaciones",
+      "color": 3974125
+   }
+}

@@ -1,0 +1,16 @@
+{
+   "embed": {
+      "title": "Ping Fantasma",
+      "color": 3974125,
+      "thumbnail": {
+         "url": "https://cdn.discordapp.com/attachments/878533922995208193/880910497376006154/879529070453461043.png"
+      },
+      "footer": {
+         "text": "Por favor no hagas ping fantasma."
+      }
+   },
+   "fields":[
+      "Canal",
+      "Menciones"
+   ]
+}

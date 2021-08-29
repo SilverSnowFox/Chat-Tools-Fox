@@ -1,5 +1,6 @@
 import simplejson as json
 import discord
+import time
 from discord import SelectMenu, SelectOption
 from discord.ext import commands
 
@@ -21,7 +22,7 @@ class Lang(commands.Cog):
             embed = json.load(f)
 
         # Send embed with select menu
-        select = await ctx.send(embed=discord.Embed.from_dict(embed['list']),
+        select = await ctx.reply(embed=discord.Embed.from_dict(embed['list']),
                                 components=[SelectMenu(custom_id='help_menu', placeholder='Languages', options=[
                 SelectOption(label='EN',
                              value='EN',
@@ -29,7 +30,7 @@ class Lang(commands.Cog):
                 SelectOption(label='ES',
                              value='ES',
                              description="Español")
-            ])])
+            ])], mention_author=False)
 
         # Check select menu
         def check_selection(i: discord.Interaction, select_menu):
@@ -67,7 +68,7 @@ class Lang(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             with open(f"embeds/{lang}/errors.json", "r") as f:
                 errors = json.load(f)
-            await ctx.send(embed=discord.Embed.from_dict(errors['admin-manage']))
+            await ctx.reply(embed=discord.Embed.from_dict(errors['admin-manage']), mention_author=False)
         else:
             raise error
 

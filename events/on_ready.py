@@ -9,10 +9,10 @@ class Start(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print(f'Bot is online. Logged in as {self.client.user.name}')
-        print(f'Bot in {len(self.client.guilds)} guilds')
-        print(f'Bot at {round(self.client.latency * 1000)} ms')
+        print(f'Bot in {len(self.client.guilds)} guilds at {round(self.client.latency * 1000)} ms')
         await self.client.change_presence(status=discord.Status.online)
-        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="chat"))
+        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,
+                                                                    name="chat | Mention for prefix!"))
 
 
 def setup(client):

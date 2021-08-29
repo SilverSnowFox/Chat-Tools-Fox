@@ -1,6 +1,7 @@
 import discord
 import os
-import json
+import simplejson as json
+import functions
 from discord.ext import commands
 
 
@@ -65,5 +66,8 @@ async def cog(ctx, action, type, category, extension):
 # Loading token
 with open("data/token.json") as json_file:
     token = json.load(json_file)
+
+print("Loaded", ", ".join([cog[0] for cog in client.cogs.items()]))
+print(f"{ len(client.cogs.items())} cogs loaded.")
 
 client.run(token)

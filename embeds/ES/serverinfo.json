@@ -1,0 +1,19 @@
+{
+   "embed": {
+      "title": "Informaci\u00F3n del Servidor",
+      "color": 3974125
+   },
+   "fields": [
+      "Nombre & ID",
+      "Cuenta de miembro",
+      "Cuenta de roles",
+      "Canales de texto",
+      "Canales de voz",
+      "Cuenta de emotes",
+      "Boosts",
+      "Due\u00F1o",
+      "Regi\u00F3n",
+      "Creado el",
+      "Nivel de verificaci\u00F3n"
+   ]
+}

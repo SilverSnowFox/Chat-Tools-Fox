@@ -1,0 +1,19 @@
+{
+   "embed": {
+      "title": "Server information",
+      "color": 3974125
+   },
+   "fields": [
+      "Name & ID",
+      "Member Count",
+      "Role Count",
+      "Text Channels",
+      "Voice Channels",
+      "Emote Count",
+      "Boosts",
+      "Owner",
+      "Region",
+      "Created at",
+      "Verification Level"
+   ]
+}

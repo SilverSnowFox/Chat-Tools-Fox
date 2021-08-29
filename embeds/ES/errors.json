@@ -3,5 +3,35 @@
       "title": "Error",
       "color": 0,
       "description": "Necesitas permiso de `Administrador` o `Gestionar Servidor` para cambiar el idioma."
+   },
+   "MemberNotFound": {
+      "title": "Error",
+      "color": 0,
+      "description": "Usuario no encontrado!\nAsegurate te haber seleccionado un miembro de este servidor o de que el usuario exista."
+   },
+   "bot-manage-guild-and-channels": {
+      "title": "Error",
+      "color": 0,
+      "description": "Requiero permiso de `Gestionar Servidor` y `Gestionar Canales` para hacer esto."
+   },
+   "missing-arg": {
+      "title": "Error",
+      "color":0,
+      "description": "Falta por lo menos 1 argumento."
+   },
+   "edit-msg-and-webhook": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesito permiso para `Gestionar Mensages` y `Gestionar Webhooks` para user el modulo de Links de Mensages."
+   },
+   "improved-pins-permissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesito permiso para `Gestionar Mensages` y `Gestionar Webhooks` para usar el modulo de Improved Pins completamente."
+   },
+   "no-pins-channel": {
+      "title": "Error",
+      "color": 0,
+      "description": "El modulo de Improved Pins est\u00E1 activado, pero no hay ning\u00FAn canal seleccionado. Por favor selecciona un canal para pins."
    }
 }

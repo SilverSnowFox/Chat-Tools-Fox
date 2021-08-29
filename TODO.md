@@ -13,21 +13,27 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 - [x] Voting Command
 - [x] Invite Command
 - [x] Bot information
-- [ ] User information
-- [ ] Server information
-- [ ] Mention to get server prefix
+- [x] User information
+- [x] Server information
+- [x] Mention to get server prefix
 
 ### Moderation
-- [ ] Anti-ghost ping
+- [x] Anti-ghost ping
 - [ ] Word whitelisting, delete message and send warn embed
-- [ ] Change prefixes
-- [ ] Change languages
-- [ ] Anti-scam
+- [x] Change prefixes
+- [x] Change languages
+- [x] Anti-scam
+- [ ] Mute with reason and time (or none)
+  - Need to check if muted role exists
+  - Need valid time
+  - Need to be able to give person role
+  - Need to check if mute works
+- [ ] Un-mute
+  - Check is person has muted role
+  - Remove muted role
+- [ ] Clear Chat 
 
 ### Chat creation and editing
-- [ ] Channel creating
-  - Create with name
-  - Optional add people
 - [ ] Channel member actions
   - Add people
   - Remove people
@@ -35,18 +41,13 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 - [ ] Slow-mode
 - [ ] Delete channel
 
-### Thread 
-- [ ] Create thread (name, time, users)
-- [ ] Delete thread
-- [ ] Archive thread?
-
 ### Report
 - [ ] Set report channel
 - [ ] Send report (Message and attachments, if any)
   - Button to reject
   - Admin reply to reject (accept)
   - DM user about report answer
-  - Edit report embed with answer
+  Edit report embed with answer
 - [ ] Try adding anonymous report
 
 ### Suggestions
@@ -61,33 +62,24 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
   - Admin and poll creator button to close poll
 
 ### Improved pins
+- [x] Created functions
 - [ ] Set pinned message channel
 - [ ] Option to enable improved pins, which sends embed with embed content to a channel and link to message
   - Need to set channel first
   - Option to send and then unpin
 
-### Logging 
-- [ ] Set edit log channel
+### Logging
 - [ ] Set pinned/unpin log channel
-- [ ] Set delete message channel
-- [ ] Set kicked channel
-- [ ] Set banned channel
-- [ ] Set joined channel
-- [ ] Set leave channel
+- [ ] Set delete message and edit log channel
+- [ ] Set kicked and banned channel
+- [ ] Set join and leave channel
 
 ### Message Link
-- [ ] If a message is linked, webhook with user avatar, name and embed of the content in the message referenced
+- [x] If a message is linked, webhook with user avatar, name and embed of the content in the message referenced
+- [ ] Add option to enable/disable
 
 ### Admin
 - [ ] Create muted role or set it up
-- [ ] Mute with reason and time (or none)
-  - Need to check if muted role exists
-  - Need valid time
-  - Need to be able to give person role
-  - Need to check if mute works
-- [ ] Un-mute
-  - Check is person has muted role
-  - Remove muted role
 - [ ] Start up
   - Creates log category with only admin perm can view
     - Create channel for join/leave
@@ -101,11 +93,8 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
   - Create pins channel
     - Can't send text
 - [ ] Invites
-  - Show
-  - Clear
-  - Create 
-    - Temporary
-    - Permanent
+  - [x] Show
+  - [ ] Clear
 
 
 ### Anonymous chat
@@ -124,3 +113,4 @@ Need to check if possible to make a channel where sends messages with random gen
   - [ ] Commands
   - [ ] Errors
 - [ ] Add custom emotes for commands
+- [ ] Disallow DM

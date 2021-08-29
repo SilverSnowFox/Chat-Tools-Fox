@@ -1,0 +1,16 @@
+{
+   "embed": {
+      "title": "Informaci\u00F3n del Usuario",
+      "color": 3974125
+   },
+   "fields": [
+      "Nombre de Usuario & ID",
+      "Estado",
+      "Actividad",
+      "Bot?",
+      "Apodo",
+      "Creado el",
+      "Unio el",
+      "Roles"
+   ]
+}

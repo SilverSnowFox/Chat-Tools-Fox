@@ -5,3 +5,5 @@ functions/__pycache__
 commands/__pycache__
 commands/admin/__pycache__
 commands/utilities/__pycache__
+commands/chat/__pycache__
+commands/moderation/__pycache__

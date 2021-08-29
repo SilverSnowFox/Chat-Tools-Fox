@@ -1,5 +1,12 @@
 {
-   "title": "Prefix",
-   "color": 3974125,
-   "description": "Prefix changed to `%VAR`"
+   "embed": {
+      "title": "Prefix",
+      "color": 3974125,
+      "description": "Prefix changed to `%VAR`"
+   },
+   "len-error": {
+      "title": "Error",
+      "color": 0,
+      "description": "Please input a prefix between 0 and 10 characters."
+   }
 }

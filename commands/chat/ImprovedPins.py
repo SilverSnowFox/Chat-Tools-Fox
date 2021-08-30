@@ -13,128 +13,113 @@ class ImprovedPins(commands.Cog):
     @commands.bot_has_permissions(manage_messages=True, manage_webhooks=True)
     async def on_message_edit(self, before, after):
         lang = getLang.getLang(before.guild.id)
+
+        # No PM
+        if before.guild is None:
+            return
+
         try:
-            # Check that message wasn't pinned and now is
-            if not before.pinned and after.pinned:
-                # Check that ImprovedPins are enabled
-                if servermodules.getConfig(before.guild.id, "pins_ch"):
-                    # Check that user set the channel
-                    channel = serverchannels.getChannel(before.guild.id, "pins")
-                    if channel == 0:
-                        # Send error that no pins channel
-                        pass
+            # Check that message wasn't pinned and now is, and that ImprovedPins are enabled
+            if not before.pinned and after.pinned and servermodules.getConfig(before.guild.id, "pins_ch"):
+
+                # Check that user set the channel
+                channel = serverchannels.getChannel(before.guild.id, "pins")
+                if channel == 0:
+                    with open(f"embeds/{lang}/improvedPins.json", "r") as f:
+                        await before.channel.send(embed=discord.Embed.from_dict(json.load(f)['NoPinChannel']))
+                    return
+
+                else:
+                    # Gets the pins channel
+                    pins_channel = self.client.get_channel(channel)
+                    attachments = before.attachments
+
+                    # Base embed
+                    baseEmbed = {
+                        "color": 3974125,
+                        "title": "Pin",
+                        "author": {"name": f"{before.author.name}#{before.author.discriminator}", "icon_url": f'{before.author.avatar_url}'},
+                        "footer": {"text": f"#{before.channel.name}"}
+                    }
+
+                    # No attachments
+                    if len(attachments) == 0:
+                        # Creates and send
+                        baseEmbed["description"] = f'{before.content}'
+                        await pins_channel.send(embed=discord.Embed.from_dict(baseEmbed))
+                        return
+
+                    # 1+ Attachments
                     else:
-                        # Gets the pins channel
-                        pins_channel = self.client.get_channel(channel)
 
-                        attachments = before.attachments
+                        # Split attachments into images and others
+                        imageFiles = []
+                        others_files = []
+                        for file in attachments:
+                            if 'image' in file.content_type:
+                                imageFiles.append(file)
+                            else:
+                                others_files.append(await file.to_file())
 
-                        baseEmbed = {
-                            "color": 3974125,
-                            "title": "Pin",
-                            "author": {
-                                "name": f"{before.author.name}#{before.author.discriminator}",
-                                "icon_url": f'{before.author.avatar_url}'
-                            },
-                            "footer": {
-                                "text": f"#{before.channel.name}"
-                            }
-                        }
+                        # Using webhook, can send up to 4 images as 1 embed even though it is 4 in code from a list.
+                        embeds = [baseEmbed]
 
-                        # No attachments
-                        if len(attachments) == 0:
-                            # Creates and send
-                            baseEmbed["description"] = f'{before.content}'
-                            await pins_channel.send(embed=discord.Embed.from_dict(baseEmbed))
-                            return
+                        # Check if has message content before picking if set the description
+                        # Add any 'others.url' to description
+                        if before.content != "":
+                            embeds[0]['description'] = f'{before.content}'
 
-                        # 1+ Attachments
-                        else:
-                            # Need to first split what type is what since can display images but not the else,
-                            # instead, will send the other as actual files
-                            images = []
-                            others_files = []
-                            for file in attachments:
-                                if 'image' in file.content_type:
-                                    images.append(file)
-                                else:
-                                    others_files.append(await file.to_file())
+                        # If contains any image
+                        if len(imageFiles) > 0:
+                            embeds[0]['image'] = {"url": f'{imageFiles[0].url}'}
+                            embeds[0]['url'] = f"{imageFiles[0].url}"
+                            # 1 < images < 5 set
+                            if len(imageFiles) > 1:
+                                for img in imageFiles[1:4]:
+                                    imag = {"url": f'{imageFiles[0].url}', "image": {"url": f"{img.url}"}}
+                                    embeds.append(imag)
 
-                            # Using webhook, can send up to 4 images as 1 embed even though it is 4 in code from a list.
-                            embeds = [baseEmbed]
+                            # 5th image
+                            if len(imageFiles) > 4:
+                                imag5 = {
+                                    "color": 3974125,
+                                    "url": f'{imageFiles[4]}',
+                                    "image": {"url": f'{imageFiles[4]}'},
+                                    "description": "\u200b",
+                                    "footer": {"text": f"#{before.channel.name}"}
+                                }
+                                embeds.append(imag5)
 
-                            # Check if has message content before picking if set the description
-                            # Add any 'others.url' to description
-                            if before.content != "":
-                                embeds[0]['description'] = f'{before.content}'
+                                # 5 < images < 9 set
+                                for img in imageFiles[5:8]:
+                                    imag = {"url": f'{imageFiles[4].url}', "image": {"url": f"{img.url}"}}
+                                    embeds.append(imag)
 
-                            # If contains any image
-                            if len(images) > 0:
-                                embeds[0]['image'] = {"url": f'{images[0].url}'}
-                                embeds[0]['url'] = f"{images[0].url}"
+                        # Converts dict to embeds and adds timestamps
+                        Embeds_final = [discord.Embed.from_dict(e) for e in embeds]
+                        Embeds_final[0].timestamp = datetime.datetime.utcnow()
+                        if len(Embeds_final) > 4:
+                            Embeds_final[4].timestamp = datetime.datetime.utcnow()
 
-                                # 1 < images < 5 set
-                                if len(images) > 1:
-                                    for img in images[1:4]:
-                                        imag = {
-                                            "url": f'{images[0].url}',
-                                            "image": {
-                                                "url": f"{img.url}"
-                                            }
-                                        }
-                                        embeds.append(imag)
+                        # Creates webhook and sends
+                        webhooks = await pins_channel.webhooks()
+                        webhook = discord.utils.get(webhooks, name=self.client.user.name)
+                        if webhook is None:
+                            webhook = await pins_channel.create_webhook(name=self.client.user.name)
+                        await webhook.send(embeds=Embeds_final,
+                                           username=self.client.user.name,
+                                           avatar_url=self.client.user.avatar_url)
+                        if len(others_files) != 0:
+                            await webhook.send(files=others_files)
 
-                                # 5th image
-                                if len(images) > 4:
-                                    imag5 = {
-                                        "color": 3974125,
-                                        "url": f'{images[4]}',
-                                        "image": {
-                                            "url": f'{images[4]}'
-                                        },
-                                        "description": "\u200b",
-                                        "footer": {
-                                            "text": f"#{before.channel.name}"
-                                        }
-                                    }
-                                    embeds.append(imag5)
-
-                                    # 5 < images < 9 set
-                                    for img in images[5:8]:
-                                        imag = {
-                                            "url": f'{images[4].url}',
-                                            "image": {
-                                                "url": f"{img.url}"
-                                            }
-                                        }
-                                        embeds.append(imag)
-
-                            # Converts dict to embeds and adds timestamps
-                            Embeds_final = [discord.Embed.from_dict(e) for e in embeds]
-                            Embeds_final[0].timestamp = datetime.datetime.utcnow()
-                            if len(Embeds_final) > 4:
-                                Embeds_final[4].timestamp = datetime.datetime.utcnow()
-
-                            # Creates webhook and sends
-                            webhooks = await pins_channel.webhooks()
-                            webhook = discord.utils.get(webhooks, name=self.client.user.name)
-                            if webhook is None:
-                                webhook = await pins_channel.create_webhook(name=self.client.user.name)
-
-                            await webhook.send(embeds=Embeds_final,
-                                               username=self.client.user.name,
-                                               avatar_url=self.client.user.avatar_url)
-                            if len(others_files) != 0:
-                                await webhook.send(files=others_files)
-
-                        await after.unpin(reason="ImprovedPins Active")
+                    await after.unpin(reason="ImprovedPins Active")
 
         except AttributeError:
-            with open(f"embeds/{lang}/errors.json", "r") as f:
-                await before.channel.send(embed=discord.Embed.from_dict(json.load(f)['no-pin-channel']))
+            with open(f"embeds/{lang}/improvedPins.json", "r") as f:
+                await before.channel.send(embed=discord.Embed.from_dict(json.load(f)['NoPinChannel']))
         except commands.errors.BotMissingPermissions or discord.errors.Forbidden:
-            with open(f"embeds/{lang}/errors.json", "r") as f:
-                await before.channel.send(embed=discord.Embed.from_dict(json.load(f)['improved-pins-permissions']))
+            with open(f"embeds/{lang}/improvedPins.json", "r") as f:
+                await before.channel.send(embed=discord.Embed.from_dict(json.load(f)['BotMissingPermissions']))
         except:
             raise Exception
 

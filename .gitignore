@@ -7,3 +7,5 @@ commands/admin/__pycache__
 commands/utilities/__pycache__
 commands/chat/__pycache__
 commands/moderation/__pycache__
+commands/reporting/__pycache__
+commands/suggestions/__pycache__

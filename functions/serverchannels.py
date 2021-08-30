@@ -25,8 +25,8 @@ def getChannel(guild_id: int, channel: str) -> int:
 
 def innitiateGuild(guild_id: int) -> None:
     cursor.execute(f"""
-        INSERT INTO server_channels(guild_id, pins, pins_log, delete_edit, kicked_ban, join_leave, user_change)
-        VALUES ({guild_id}, 0, 0, 0, 0, 0)""")
+        INSERT INTO server_channels(guild_id, pins, pins_log, delete_edit, kicked_ban, join_leave, user_change, suggestions, reports)
+        VALUES ({guild_id}, 0, 0, 0, 0, 0, 0, 0)""")
     connection.commit()
 
 

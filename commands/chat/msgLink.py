@@ -10,20 +10,18 @@ class msgLink(commands.Cog):
         self.client = client
 
     @commands.Cog.listener()
-    @commands.bot_has_permissions(manage_permissions=True, manage_webhooks=True)
+    @commands.bot_has_permissions(manage_messages=True, manage_webhooks=True)
     async def on_message(self, message):
+        # No PM, no bot and check that enabled
+        if message.guild is None or message.author.bot or not functions.servermodules.getConfig(message.guild.id, "msg_links"):
+            return
         try:
-            if message.author.bot:
-                return
-            if not functions.servermodules.getConfig(message.guild.id, "msg_links"):
-                return
-
             links = re.findall(r"https://discord\.com/channels/................../................../..................", message.content)
 
+            # Checks that there exists at least 1 link
             if len(links) != 0:
                 content = message.content
                 for x in links:
-                    print(x)
                     content = content.replace(x, "")
 
                 webhooks = await message.channel.webhooks()
@@ -52,12 +50,11 @@ class msgLink(commands.Cog):
                         embed.set_footer(text=messageRef.channel.name)
 
                         await webhook.send(embed=embed, username=message.author.display_name, avatar_url=message.author.avatar_url)
-        except discord.errors.HTTPException:
-            pass
-        except commands.BotMissingPermissions:
+
+        except commands.BotMissingPermissions or discord.errors.Forbidden:
             lang = functions.getLang.getLang(message.guild.id)
-            with open(f"embeds/{lang}/errors.json", "r") as f:
-                await message.channel.send(json.load(f)['edit-msg-and-webhook'])
+            with open(f"embeds/{lang}/msgLink.json", "r") as f:
+                await message.channel.send(json.load(f)['BotMissingPermissions'])
         except Exception as e:
             raise e
 

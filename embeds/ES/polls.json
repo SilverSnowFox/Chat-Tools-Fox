@@ -1,0 +1,11 @@
+{
+   "voted": "Votado!",
+   "already-voted": "Ya has votado. Presiona X para cancelar tu voto",
+   "cancel": "Haz cancelado tu voto!",
+   "no-vote": "No has votado!",
+   "LengthError": {
+      "title": "Error",
+      "color": 0,
+      "description": "Por favor aporte una pregunta y entre 2 y 10 opcioned separados por `$`.\nEx: question$option 1$option 2$option 3"
+   }
+}

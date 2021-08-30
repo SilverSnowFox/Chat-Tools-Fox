@@ -1,0 +1,14 @@
+{
+   "title": "Suggestion",
+   "Confirmed": "Suggestion sent!",
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "Please input an argument/text."
+   },
+   "CommandInvokeError": {
+      "title": "Error",
+      "color": 0,
+      "description": "No set suggestions channel."
+   }
+}

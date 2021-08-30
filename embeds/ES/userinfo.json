@@ -12,5 +12,10 @@
       "Creado el",
       "Unio el",
       "Roles"
-   ]
+   ],
+   "MemberNotFound": {
+      "title": "Error",
+      "color": 0,
+      "description": "Usuario no encontrado!\nAsegurate te haber seleccionado un miembro de este servidor o de que el usuario exista."
+   }
 }

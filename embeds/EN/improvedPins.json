@@ -1,0 +1,12 @@
+{
+   "NoPinChannel": {
+      "title": "Error",
+      "color": 0,
+      "description": "The Improved Pins module is enabled, but no channel was selected. Please set a pins channel."
+   },
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "I need `Manage Messages` and `Manage Webhooks` permissions to fully use Improved Pins module."
+   }
+}

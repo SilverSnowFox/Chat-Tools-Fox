@@ -1,0 +1,14 @@
+{
+   "DeleteNoUser": "Borre %VAR mensajes.",
+   "DeleteWithUser": "Borre %VAR1 de mensajes de %VAR2.",
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Requiero permiso de `Gestionar Mensajes` y `Leer Historial de Mensajes` para funcionar completamente."
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Gestionar Mensajes` para hacer esto."
+   }
+}

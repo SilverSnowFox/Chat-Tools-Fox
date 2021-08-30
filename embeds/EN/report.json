@@ -1,0 +1,19 @@
+{
+   "title": "Report",
+   "Confirmed": "Report sent.",
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "Please input an argument/text."
+   },
+   "CommandInvokeError": {
+      "title": "Error",
+      "color": 0,
+      "description": "No set report channel."
+   },
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "I require `Manage Messages` permission."
+   }
+}

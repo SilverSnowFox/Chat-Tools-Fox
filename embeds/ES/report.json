@@ -1,0 +1,19 @@
+{
+   "title": "Reporte",
+   "Confirmed": "Reporte enviado.",
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "No enviaste ningun archivo o mensage."
+   },
+   "CommandInvokeError": {
+      "title": "Error",
+      "color": 0,
+      "description": "No hay canal de reportes."
+   },
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Requiero del permiso de `Gestionar Mensages`."
+   }
+}

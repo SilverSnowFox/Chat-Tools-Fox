@@ -14,6 +14,7 @@ def get_prefix(client, message):
 
 client = commands.Bot(command_prefix=get_prefix)
 
+
 # Load commands and events
 for category in os.listdir('commands/'):
     for filename in os.listdir(f'commands/{category}/'):

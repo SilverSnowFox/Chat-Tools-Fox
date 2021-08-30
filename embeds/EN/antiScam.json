@@ -1,0 +1,15 @@
+{
+   "embed": {
+      "title": "Scam link detected!",
+      "color": 3974125,
+      "description": "User %VAR has sent a message with what was detected to be a scam link.",
+      "thumbnail": {
+         "url": "https://cdn.discordapp.com/attachments/878533922995208193/880910497376006154/879529070453461043.png"
+      }
+   },
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "I require `Manage Messages` permissions to delete messages, or you can disable the Anti Scam module."
+   }
+}

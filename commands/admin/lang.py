@@ -1,6 +1,5 @@
 import simplejson as json
 import discord
-import time
 from discord import SelectMenu, SelectOption
 from discord.ext import commands
 
@@ -9,9 +8,10 @@ class Lang(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.command(aliases=["Lang"])
+    @commands.command(aliases=["Lang"], no_pm=True)
     @commands.has_permissions(manage_guild=True)
     async def lang(self, ctx):
+
         # Get server language
         with open('serverconfig/lang.json', 'r') as f:
             language = json.load(f)
@@ -22,8 +22,8 @@ class Lang(commands.Cog):
             embed = json.load(f)
 
         # Send embed with select menu
-        select = await ctx.reply(embed=discord.Embed.from_dict(embed['list']),
-                                components=[SelectMenu(custom_id='help_menu', placeholder='Languages', options=[
+        select = await ctx.reply(embed=discord.Embed.from_dict(embed['list']).set_thumbnail(url=self.client.avatar_url),
+                                components=[SelectMenu(custom_id='lang-menu', placeholder='Languages', options=[
                 SelectOption(label='EN',
                              value='EN',
                              description='English'),
@@ -37,6 +37,7 @@ class Lang(commands.Cog):
             return i.message == select and i.author.id == ctx.message.author.id
         interaction, select_menu = await self.client.wait_for('selection_select', check=check_selection)
         lang = select_menu.values[0]
+
         await select.delete()
 
         # Update language
@@ -49,16 +50,6 @@ class Lang(commands.Cog):
             embed = json.load(f)
         await ctx.send(embed=discord.Embed.from_dict(embed['change']))
 
-        # Logging embed
-        log_embed = {
-            "title": "Language",
-            "color": 3974125,
-            "description": f"`{old_language}` -> `{language}`",
-            "author": {
-                "name": f"{ctx.message.author.name} ({ctx.message.author.id})",
-                "icon_url": ctx.message.author.avatar_url
-            }
-        }
 
     @lang.error
     async def lang_error(self, ctx, error):
@@ -66,9 +57,9 @@ class Lang(commands.Cog):
         lang = getLang(ctx.message.guild.id)
 
         if isinstance(error, commands.MissingPermissions):
-            with open(f"embeds/{lang}/errors.json", "r") as f:
+            with open(f"embeds/{lang}/language.json", "r") as f:
                 errors = json.load(f)
-            await ctx.reply(embed=discord.Embed.from_dict(errors['admin-manage']), mention_author=False)
+            await ctx.reply(embed=discord.Embed.from_dict(errors['MissingPermissions']), mention_author=False)
         else:
             raise error
 

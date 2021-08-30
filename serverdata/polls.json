@@ -1,0 +1,18 @@
+{
+    "881671451588042764": {
+        "answers": {
+            "arg0": {
+                "emote": ":one:",
+                "option": "opcion 1",
+                "count": 0
+            },
+            "arg1": {
+                "emote": ":two:",
+                "option": "opcion 2",
+                "count": 0
+            }
+        },
+        "voters": {},
+        "question": "Hola"
+    }
+}

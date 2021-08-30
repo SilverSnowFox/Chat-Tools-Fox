@@ -8,5 +8,15 @@
       "title": "Error",
       "color": 0,
       "description": "Please input a prefix between 0 and 10 characters."
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "You need `Manage Server` permissions to do this"
+   },
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color":0,
+      "description": "Missing an argument, please input a prefix with up to 10 characters."
    }
 }

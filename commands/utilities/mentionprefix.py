@@ -10,6 +10,8 @@ class Mention(commands.Cog):
     @commands.Cog.listener()
     @commands.guild_only()
     async def on_message(self, message):
+        if "purge" in message:
+            return
         if self.client.user.mentioned_in(message):
             lang = functions.getLang.getLang(message.guild.id)
             with open("serverconfig/prefixes.json", "r") as f:

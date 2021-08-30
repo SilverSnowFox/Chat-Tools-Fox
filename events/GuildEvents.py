@@ -11,16 +11,19 @@ class GuildEvents(commands.Cog):
     # Add guild to prefix list
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
+
         # Sets the default prefix to =
         with open('serverconfig/prefixes.json', 'r') as f:
             prefixes = json.load(f)
-            prefixes[str(guild.id)] = "="
+        prefixes[str(guild.id)] = "="
+        with open('serverconfig/prefixes.json', 'w') as f:
             json.dump(prefixes, f, indent=4)
 
         # Sets the default language to EN
         with open('serverconfig/lang.json', 'r') as f:
             language = json.load(f)
-            language[str(guild.id)] = 'EN'
+        language[str(guild.id)] = 'EN'
+        with open('serverconfig/lang.json', 'w') as f:
             json.dump(language, f, indent=4)
 
         # Innitiated guild entries in modules and channels database
@@ -33,16 +36,19 @@ class GuildEvents(commands.Cog):
     # Remove guild from prefix list
     @commands.Cog.listener()
     async def on_guild_remove(self, guild):
+
         # Removes guild from prefixes
         with open('serverconfig/prefixes.json', 'r') as f:
             prefixes = json.load(f)
-            prefixes.pop(str(guild.id))
+        prefixes.pop(str(guild.id))
+        with open('serverconfig/prefixes.json', 'w') as f:
             json.dump(prefixes, f, indent=4)
 
         # Removes server from languages
         with open('serverconfig/lang.json', 'r') as f:
             language = json.load(f)
-            language.pop(str(guild.id))
+        language.pop(str(guild.id))
+        with open('serverconfig/lang.json', 'w') as f:
             json.dump(language, f, indent=4)
 
         # Removes guild from the databases

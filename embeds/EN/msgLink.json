@@ -1,0 +1,7 @@
+{
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "I need `Manage Messages` and `Manage Webhooks` permissions to use the Message Link module."
+   }
+}

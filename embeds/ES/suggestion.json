@@ -1,0 +1,14 @@
+{
+   "title": "Sugerencia",
+   "Confirmed": "Sugerencia enviada!",
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "No enviaste ningun argumento o archivo."
+   },
+   "CommandInvokeError": {
+      "title": "Error",
+      "color": 0,
+      "description": "No hay canal de sugerencias."
+   }
+}

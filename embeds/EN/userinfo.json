@@ -12,5 +12,10 @@
       "Created at",
       "Joined at",
       "Roles"
-   ]
+   ],
+   "MemberNotFound": {
+      "title": "Error",
+      "color": 0,
+      "description": "User not found!\nMake sure you select a member of this guild or a user that exists."
+   }
 }

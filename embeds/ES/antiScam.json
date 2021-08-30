@@ -1,0 +1,15 @@
+{
+   "embed": {
+      "title": "Link de scam detectado!",
+      "color": 3974125,
+      "description": "Usuario %VAR ha enviado un mensage con lo que detecte que fuera un scam.",
+      "thumbnail": {
+         "url": "https://cdn.discordapp.com/attachments/878533922995208193/880910497376006154/879529070453461043.png"
+      }
+   },
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesito permiso para `Gestionar Mensajes` para borrar este mensaje, o puedes desabilitar el modulo de Anti Scam."
+   }
+}

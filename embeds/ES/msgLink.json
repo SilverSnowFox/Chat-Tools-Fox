@@ -1,0 +1,7 @@
+{
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesito permiso para `Gestionar Mensages` y `Gestionar Webhooks` para user el modulo de Links de Mensages."
+   }
+}

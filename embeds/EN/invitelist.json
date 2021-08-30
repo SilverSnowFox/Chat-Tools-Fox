@@ -7,5 +7,10 @@
    "top25": {
       "title": "Top 25 invitations",
       "color": 3974125
+   },
+   "BotMissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "I require `Manage Server` and `Manage Channels` permission to do this."
    }
 }

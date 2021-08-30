@@ -8,5 +8,10 @@
       "title": "Idioma",
       "color": 3974125,
       "description": "El idioma ha cambio a Espa\u00f1ol"
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Gestionar Servidor` para cambiar el idioma."
    }
 }

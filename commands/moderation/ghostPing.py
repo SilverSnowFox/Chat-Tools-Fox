@@ -10,9 +10,16 @@ class Ghostping(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message_delete(self, message):
+        # Check that mentions have no bots
+        def check_only_bot(m):
+            for mention in m.mentions:
+                if not mention.bot:
+                    return False
+            return True
+
         try:
             if functions.servermodules.getConfig(message.guild.id, "ghost_ping"):
-                if message.mentions[0] == message.author or message.author.bot:
+                if message.mentions[0] == message.author or message.author.bot or check_only_bot(message):
                     return
                 lang = functions.getLang.getLang(message.guild.id)
                 with open(f"embeds/{lang}/ghost_ping.json", "r") as f:

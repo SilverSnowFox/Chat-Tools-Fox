@@ -1,0 +1,11 @@
+{
+   "voted": "Voted!",
+   "already-voted": "You have already voted. Click on X to cancel your vote.",
+   "cancel": "You have canceled your vote!",
+   "no-vote": "You haven't voted!",
+   "LengthError": {
+      "title": "Error",
+      "color": 0,
+      "description": "Please input one question and between 2 and 10 options split by `$`\nEx: question$option 1$option 2$option 3"
+   }
+}

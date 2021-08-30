@@ -19,18 +19,9 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 
 ### Moderation
 - [x] Anti-ghost ping
-- [ ] Word whitelisting, delete message and send warn embed
 - [x] Change prefixes
 - [x] Change languages
 - [x] Anti-scam
-- [ ] Mute with reason and time (or none)
-  - Need to check if muted role exists
-  - Need valid time
-  - Need to be able to give person role
-  - Need to check if mute works
-- [ ] Un-mute
-  - Check is person has muted role
-  - Remove muted role
 - [ ] Clear Chat 
 
 ### Chat creation and editing
@@ -48,7 +39,6 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
   - Admin reply to reject (accept)
   - DM user about report answer
   Edit report embed with answer
-- [ ] Try adding anonymous report
 
 ### Suggestions
 - [ ] Set suggestion channel
@@ -58,8 +48,7 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 - [ ] Try adding anonymous suggestion
 
 ### Poll
-- [ ] Create a poll with upvote and down-vote, timed (none, msg)
-  - Admin and poll creator button to close poll
+- [x] Create a poll with up to 10 answers
 
 ### Improved pins
 - [x] Created functions
@@ -79,7 +68,6 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 - [ ] Add option to enable/disable
 
 ### Admin
-- [ ] Create muted role or set it up
 - [ ] Start up
   - Creates log category with only admin perm can view
     - Create channel for join/leave
@@ -113,4 +101,27 @@ Need to check if possible to make a channel where sends messages with random gen
   - [ ] Commands
   - [ ] Errors
 - [ ] Add custom emotes for commands
-- [ ] Disallow DM
+
+
+### Finished Commands
+- Invitelist
+- Prefix
+- Lang
+- ImprovedPins
+- Polls
+- msgLinks
+- antiScam
+- report
+- suggest
+- botinfo
+- invite
+- mentionprefix
+- serverinfo
+- userinfo
+- voting
+- [ ] Set pins/suggestions/reports
+- [ ] Display pins/suggestions/reports channels
+- [ ] Toggle antiScam/ghostPing/msgLinks
+- [ ] Display antiScam/ghostPing/msgLinks
+- purge
+- [ ] Help

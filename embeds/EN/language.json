@@ -8,5 +8,10 @@
       "title": "Language",
       "color": 3974125,
       "description": "Language changed to English"
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "You need `Administrator` or `Manage Server` permissions to change the language."
    }
 }

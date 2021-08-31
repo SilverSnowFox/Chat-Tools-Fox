@@ -1,14 +1,6 @@
 #Chat Tools Fox
 This is a Discord.py bot that focuses on chat functionality and moderation.
 
-### Help
-- [ ] Help
-  - [ ] Create Main
-    - Select menu with categories
-  - [ ] Create the categories
-    - Use select menu with hidden reply
-  - [ ] Button with invite
-
 
 ### Chat creation and editing
 - [ ] Channel member actions
@@ -20,10 +12,6 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 
 
 ### Suggestions
-- [ ] Set suggestion channel
-- [ ] Suggest
-  - Add button to upvote or down-vote
-  - Admin reply to suggestion, or to close it with reason
 - [ ] Try adding anonymous suggestion
 
 
@@ -47,7 +35,6 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
   - Create pins channel
     - Can't send text
 - [ ] Invites
-  - [x] Show
   - [ ] Clear
 
 
@@ -55,32 +42,7 @@ This is a Discord.py bot that focuses on chat functionality and moderation.
 Need to check if possible to make a channel where sends messages with random gen, or number with increasing index using webhook and generic avatar.
 
 
-### Finished Commands
-- ImprovedPins
-- msgLinks
-- antiScam
-- report
-- suggest
-- Set
-- [ ] Help
-
-Fix the invite link to with admin and without admin
+### Others
 
 Make a README
-
-# Utility Commands
-
-- Invites
-- Botinfo
-- Invite
-- @me
-- Serverinfo
-- Voting
-- Userinfo
-- Poll
-
-#  Admin COmmands
-- Prefix
-- Lang
-- Settings
-- Purge
+Try making with images

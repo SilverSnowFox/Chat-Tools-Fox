@@ -31,7 +31,6 @@ class Botinfo(commands.Cog):
         embed.add_field(name=botcategories['fields'][3], value=f"{len(self.client.guilds)}")
         embed.add_field(name=botcategories['fields'][4], value=f"{timedelta(seconds=round(time.time() - startTime))}")
         embed.add_field(name=botcategories['fields'][5], value="SevenTails#7757", inline=False)
-        embed.add_field(name=botcategories['fields'][6], value=":flag_ca: - SevenTails#7757\n:flag_es: - SevenTails#7757", inline=False)
         embed.set_thumbnail(url=self.client.user.avatar_url)
 
         await ctx.reply(embed=embed, components=[Button(

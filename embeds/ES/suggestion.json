@@ -4,7 +4,7 @@
    "MissingRequiredArgument": {
       "title": "Error",
       "color": 0,
-      "description": "No enviaste ningun argumento o archivo."
+      "description": "No enviaste ning\u00FAn argumento o archivo. Ex: `suggest <sugerencia>`"
    },
    "CommandInvokeError": {
       "title": "Error",

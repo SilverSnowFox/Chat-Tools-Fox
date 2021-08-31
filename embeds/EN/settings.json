@@ -8,7 +8,7 @@
       "name": "Channels",
       "value": "Improved Pins : %VAR1\nSuggestions : %VAR2\nReports : %VAR3"
    },
-   "Footer": "To change or add the channels, use `set <category> <channel>`, and `remove <category>` to remove",
+   "Footer": "To change or add the channels, use `set <category> <channel>`, and `remove <category>` to remove.",
    "Button": {
       "Scam": "Anti-scam",
       "Ping": "Ghost-ping",
@@ -17,6 +17,6 @@
    "UserMissingPermission": {
       "title": "Error",
       "color": 0,
-      "description": "You need `Manage Guild` permissions to do this."
+      "description": "You need `Manage Server` permissions to do this."
    }
 }

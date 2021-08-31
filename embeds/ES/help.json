@@ -44,7 +44,7 @@
    "Admin": {
       "title": "Ayuda - Admin",
       "color": 3974125,
-      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Prefix <prefix>` - Cambia el prefix del bot a un argumento entre 1 y 10 car\u00E1cteres.\n`Lang` - Cambia el idioma del bot.\n`Settings` -  Muestra las configuraciones de los modulos en el servidor, y permite habilitar o deshabilitar ciertos modulos.\n`Purge <numero> [@user]` - Borra 'numero' mensajes. Si mencionas a un usuario, solo borra 'numero' mensajes de ese usuario.\n`Set <categoria> <canal>` - Establece el canal para sugerencias, reportes o Improved Pins.\n`Remove <categoria>` - Remuve el canal para sugerencias, reportes o Improved Pins."
+      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Prefix <prefix>` - Cambia el prefix del bot a un argumento entre 1 y 10 car\u00E1cteres.\n`Lang` - Cambia el idioma del bot.\n`Settings` -  Muestra las configuraciones de los m\u00E1dulos en el servidor, y permite habilitar o deshabilitar ciertos modulos.\n`Purge <n\u00FAmero> [@user]` - Borra 'n\u00FAmero' mensajes. Si mencionas a un usuario, solo borra 'n\u00FAmero' mensajes de ese usuario.\n`Set <categor\u00EDa> <canal>` - Establece el canal para sugerencias, reportes o Improved Pins.\n`Remove <categor\u00EDa>` - Remueve el canal para sugerencias, reportes o Improved Pins."
    },
    "Main-ActionRow": {
       "type": 1,
@@ -57,7 +57,7 @@
          },
          {
             "type": 2,
-            "label": "Modulos",
+            "label": "M\u00E1dulos",
             "style": 1,
             "custom_id": "Modules"
          },

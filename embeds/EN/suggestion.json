@@ -4,7 +4,7 @@
    "MissingRequiredArgument": {
       "title": "Error",
       "color": 0,
-      "description": "Please input an argument/text."
+      "description": "Please input an argument. Ex: `suggest <suggestion>`."
    },
    "CommandInvokeError": {
       "title": "Error",

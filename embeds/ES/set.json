@@ -1,7 +1,7 @@
 {
-   "Suggestions": "Canal de sugerencias ajustado a %VAR",
-   "Reports": "Canal de reportes ajustado a %VAR",
-   "ImprovedPins": "Canal de improved pins ajustado a %VAR",
+   "Suggestions": "Canal de sugerencias ajustado a %VAR.",
+   "Reports": "Canal de reportes ajustado a %VAR.",
+   "ImprovedPins": "Canal de improved pins ajustado a %VAR.",
    "InvalidCategory": {
       "title": "Error",
       "color": 0,
@@ -10,7 +10,7 @@
    "MissingRequiredArgument": {
       "title": "Error",
       "color": 0,
-      "description": "Falta por lo menos un argumento: `set <category> <channel>`"
+      "description": "Falta por lo menos un argumento: `set <categor\u00EDa> <canal>`"
    },
    "MissingPermissions": {
       "title": "Error",

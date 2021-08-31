@@ -4,7 +4,7 @@
    "MissingRequiredArgument": {
       "title": "Error",
       "color": 0,
-      "description": "No enviaste ningun archivo o mensage."
+      "description": "No enviaste ning\u00FAn archivo o mensaje."
    },
    "CommandInvokeError": {
       "title": "Error",
@@ -14,6 +14,6 @@
    "BotMissingPermissions": {
       "title": "Error",
       "color": 0,
-      "description": "Requiero del permiso de `Gestionar Mensages`."
+      "description": "Requiero del permiso de `Gestionar Mensajes`."
    }
 }

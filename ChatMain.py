@@ -1,7 +1,6 @@
 import discord
 import os
 import simplejson as json
-import functions
 from discord.ext import commands
 
 
@@ -28,10 +27,10 @@ for filename in os.listdir('events/'):
 
 # Cog load, reload and unload
 @client.command(aliases=["Cog"])
-async def cog(ctx, action, type, category, extension):
+async def cog(ctx, action, cogType, folder, extension):
 
     # To check that cog exists
-    if not os.path.isfile(f"{type}/{category}/{extension}.py"):
+    if not os.path.isfile(f"{cogType}/{folder}/{extension}.py"):
         await ctx.send("Cog doesn't exist.")
         return
 
@@ -45,14 +44,14 @@ async def cog(ctx, action, type, category, extension):
 
         # Checks for each Cog action. If use one cog more than the other can change their order.
         if action == "reload":
-            client.unload_extension(f'{type}.{category}.{extension}')
-            client.load_extension(f'{type}.{category}.{extension}')
+            client.unload_extension(f'{cogType}.{folder}.{extension}')
+            client.load_extension(f'{cogType}.{folder}.{extension}')
             await ctx.send(f"Cog {extension} reloaded")
         elif action == "load":
-            client.load_extension(f'{type}.{category}.{extension}')
+            client.load_extension(f'{cogType}.{folder}.{extension}')
             await ctx.send(f"Cog {extension} loaded.")
         elif action == "unload":
-            client.unload_extension(f'{type}.{category}.{extension}')
+            client.unload_extension(f'{cogType}.{folder}.{extension}')
             await ctx.send(f"Cog {extension} unloaded.")
         else:
             await ctx.send("That cog action doesn't exist.")

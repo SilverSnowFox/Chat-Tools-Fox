@@ -116,8 +116,8 @@ class Settings(commands.Cog):
                     return ":red_square:"
 
                 def channel(channel):
-                    if channel != 0:
-                        return self.client.get_channel(improvedPins).mention
+                    if self.client.get_channel(channel) is not None:
+                        return self.client.get_channel(channel).mention
                     return "`None`"
 
                 # Embed

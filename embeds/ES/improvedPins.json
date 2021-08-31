@@ -2,11 +2,11 @@
    "BotMissingPermissions": {
       "title": "Error",
       "color": 0,
-      "description": "Necesito permiso para `Gestionar Mensages` y `Gestionar Webhooks` para usar el modulo de Improved Pins completamente."
+      "description": "Necesito permiso para `Gestionar Mensajes` y `Gestionar Webhooks` para usar el m\u00F3dulo de Improved Pins completamente."
    },
    "NoPinChannel": {
       "title": "Error",
       "color": 0,
-      "description": "El modulo de Improved Pins est\u00E1 activado, pero no hay ning\u00FAn canal seleccionado. Por favor selecciona un canal para pins."
+      "description": "El m\u00F3dulo de Improved Pins est\u00E1 activado, pero no hay ning\u00FAn canal seleccionado. Por favor selecciona un canal para pins."
    }
 }

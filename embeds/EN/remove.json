@@ -10,7 +10,7 @@
    "MissingRequiredArgument": {
       "title": "Error",
       "color": 0,
-      "description": "You are missing an argument: `remove <category>`"
+      "description": "You are missing an argument: `remove <category>`."
    },
    "MissingPermissions": {
       "title": "Error",

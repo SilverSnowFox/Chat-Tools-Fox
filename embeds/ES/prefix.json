@@ -2,12 +2,12 @@
    "embed": {
       "title": "Prefix",
       "color": 3974125,
-      "description": "Prefix cambiado a `%VAR`"
+      "description": "Prefix cambiado a `%VAR`."
    },
    "len-error": {
       "title": "Error",
       "color": 0,
-      "description": "Por favor seleciona un prefix entre 0 y 10 caracteres."
+      "description": "Por favor selecciona un prefix entre 0 y 10 caracteres."
    },
    "MissingPermissions": {
       "title": "Error",
@@ -17,6 +17,6 @@
    "MissingRequiredArgument": {
       "title": "Error",
       "color":0,
-      "description": "Falta argumento. Por favor seleciona un prefix entre 0 y 10 caracteres."
+      "description": "Falta argumento. Por favor selecciona un prefix entre 0 y 10 caracteres."
    }
 }

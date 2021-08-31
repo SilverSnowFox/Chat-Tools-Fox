@@ -9,3 +9,4 @@ commands/chat/__pycache__
 commands/moderation/__pycache__
 commands/reporting/__pycache__
 commands/suggestions/__pycache__
+commands/errors/__pycache__

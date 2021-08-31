@@ -10,6 +10,6 @@
    "BotMissingPermissions": {
       "title": "Error",
       "color": 0,
-      "description": "I require `Manage Messages` permissions to delete messages, or you can disable the Anti Scam module."
+      "description": "I require `Manage Messages` permissions to delete messages, or you can disable the Anti-Scam module."
    }
 }

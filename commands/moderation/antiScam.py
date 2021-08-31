@@ -29,7 +29,7 @@ class Scamlink(commands.Cog):
             for link in links:
                 if link in message.content:
                     embed = scamData['embed']
-                    embed['description'].replace("%VAR", message.author.mention)
+                    embed['description'] = embed['description'].replace("%VAR", message.author.mention)
                     await message.channel.send(embed=discord.Embed.from_dict(embed))
                     await message.delete()
                     break

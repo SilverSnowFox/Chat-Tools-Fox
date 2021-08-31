@@ -1,7 +1,7 @@
 {
-   "Suggestions": "Suggestions channel set to %VAR",
-   "Reports": "Reports channel set to %VAR",
-   "ImprovedPins": "Improved Pins channel set to %VAR",
+   "Suggestions": "Suggestions channel set to %VAR.",
+   "Reports": "Reports channel set to %VAR.",
+   "ImprovedPins": "Improved Pins channel set to %VAR.",
    "InvalidCategory": {
       "title": "Error",
       "color": 0,
@@ -10,7 +10,7 @@
    "MissingRequiredArgument": {
       "title": "Error",
       "color": 0,
-      "description": "You are missing at least 1 argument: `set <category> <channel>`"
+      "description": "You are missing at least 1 argument: `set <category> <channel>`."
    },
    "MissingPermissions": {
       "title": "Error",

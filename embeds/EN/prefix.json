@@ -2,7 +2,7 @@
    "embed": {
       "title": "Prefix",
       "color": 3974125,
-      "description": "Prefix changed to `%VAR`"
+      "description": "Prefix changed to `%VAR`."
    },
    "len-error": {
       "title": "Error",
@@ -12,7 +12,7 @@
    "MissingPermissions": {
       "title": "Error",
       "color": 0,
-      "description": "You need `Manage Server` permissions to do this"
+      "description": "You need `Manage Server` permissions to do this."
    },
    "MissingRequiredArgument": {
       "title": "Error",

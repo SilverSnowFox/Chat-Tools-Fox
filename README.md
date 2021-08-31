@@ -31,19 +31,19 @@ Explanation on the modules. Use `settings` to check the server's settings.
 ### Improved Pins
 When a user pins a message, I will send the message to the set pins channel as an embed, together with the files, and unpin it to avoid reaching the pin limit.
 
-![Improved Pins image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/Pins.png?raw=true)
+![Improved Pins image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/Pins.PNG?raw=true)
 
 ### Message Links
 When a user sends the link to a message I can access, I will display the contents of the message and its author.
 
-![Message links image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/msgLink.png?raw=true)
+![Message links image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/msgLink.PNG?raw=true)
 
 ### Anti-Scam
 If a user sends a link to a scam registered in my database, I will delete that message.
 
-![Anti-scams image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/Scams.png?raw=true)
+![Anti-scams image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/Scams.PNG?raw=true)
 
 ### Anti-Ghost Ping
 Ever wanted to know who was it that mentioned you and deleted the message? If they do, I will send a message with who was mentioned.
 
-![Anti-ghost pings image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/Ghost.png?raw=true)
+![Anti-ghost pings image](https://github.com/SilverSnowFox/Chat-Tools-Fox/blob/main/ReadMeFiles/Ghost.PNG?raw=true)

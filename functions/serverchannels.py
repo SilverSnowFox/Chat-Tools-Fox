@@ -36,9 +36,9 @@ def deleteGuild(guild_id: int) -> None:
         WHERE guild_id = {guild_id}""")
 
 
-def updateModule(guild_id: int, module: str, update:bool) -> None:
+def updateModule(guild_id: int, module: str, update: int) -> None:
     cursor.execute(f"""
         UPDATE server_channels
-        SET {module} = {int(update)}
+        SET {module} = {update}
         WHERE guild_id = {guild_id}""")
     connection.commit()

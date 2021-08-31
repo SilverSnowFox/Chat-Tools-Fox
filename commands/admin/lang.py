@@ -1,3 +1,4 @@
+import time
 import simplejson as json
 import discord
 from discord import SelectMenu, SelectOption
@@ -22,7 +23,7 @@ class Lang(commands.Cog):
             embed = json.load(f)
 
         # Send embed with select menu
-        select = await ctx.reply(embed=discord.Embed.from_dict(embed['list']).set_thumbnail(url=self.client.avatar_url),
+        select = await ctx.reply(embed=discord.Embed.from_dict(embed['list']).set_thumbnail(url=self.client.user.avatar_url),
                                 components=[SelectMenu(custom_id='lang-menu', placeholder='Languages', options=[
                 SelectOption(label='EN',
                              value='EN',
@@ -30,7 +31,7 @@ class Lang(commands.Cog):
                 SelectOption(label='ES',
                              value='ES',
                              description="Español")
-            ])], mention_author=False)
+            ])], mention_author=False, remove_after=20)
 
         # Check select menu
         def check_selection(i: discord.Interaction, select_menu):
@@ -48,8 +49,9 @@ class Lang(commands.Cog):
         # Gets and sends embed of new language
         with open(f"embeds/{lang}/language.json", "r") as f:
             embed = json.load(f)
-        await ctx.send(embed=discord.Embed.from_dict(embed['change']))
-
+        msg = await ctx.send(embed=discord.Embed.from_dict(embed['change']))
+        time.sleep(20)
+        await msg.delete()
 
     @lang.error
     async def lang_error(self, ctx, error):
@@ -59,7 +61,7 @@ class Lang(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             with open(f"embeds/{lang}/language.json", "r") as f:
                 errors = json.load(f)
-            await ctx.reply(embed=discord.Embed.from_dict(errors['MissingPermissions']), mention_author=False)
+            await ctx.reply(embed=discord.Embed.from_dict(errors['MissingPermissions']), mention_author=False, delete_after=20)
         else:
             raise error
 

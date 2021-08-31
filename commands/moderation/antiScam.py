@@ -2,6 +2,7 @@ import discord
 import simplejson as json
 import functions
 from discord.ext import commands
+from functions import servermodules, getLang
 
 
 class Scamlink(commands.Cog):
@@ -13,10 +14,10 @@ class Scamlink(commands.Cog):
     async def on_message(self, message):
 
         # No PM and check the module is enabled
-        if message.guild is None or not functions.servermodules.getConfig(message.guild.id, "anti_scam"):
+        if message.guild is None or not servermodules.getConfig(message.guild.id, "anti_scam"):
             return
 
-        lang = functions.getLang.getLang(message.guild.id)
+        lang = getLang.getLang(message.guild.id)
         with open(f"embeds/{lang}/antiScam.json", "r") as f:
             scamData = json.load(f)
 

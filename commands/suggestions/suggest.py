@@ -17,7 +17,7 @@ class Suggest(commands.Cog):
 
         try:
             if suggestion == "" and len(ctx.message.attachments) == 0:
-                await ctx.reply(embed=discord.Embed.from_dict(suggestData["MissingRequiredArgument"]))
+                await ctx.reply(embed=discord.Embed.from_dict(suggestData["MissingRequiredArgument"]), delete_after=20)
                 return
 
             # Get suggestion channel
@@ -39,11 +39,13 @@ class Suggest(commands.Cog):
             msg = await suggestionCh.send(embed=embed)
             await msg.add_reaction('👍')
             await msg.add_reaction('👎')
-            await ctx.reply(content=suggestData['Confirmed'], mention_author=False)
+            await ctx.reply(content=suggestData['Confirmed'], mention_author=False, delete_after=20)
 
         # No set channel
         except commands.errors.CommandInvokeError:
-            await ctx.reply(embed=discord.Embed.from_dict(suggestData["CommandInvokeError"]))
+            await ctx.reply(embed=discord.Embed.from_dict(suggestData["CommandInvokeError"]), delete_after=20)
+        except AttributeError:
+            await ctx.reply(embed=discord.Embed.from_dict(suggestData["CommandInvokeError"]), delete_after=20)
 
 
 def setup(client):

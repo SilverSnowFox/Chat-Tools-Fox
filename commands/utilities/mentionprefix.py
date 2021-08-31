@@ -1,3 +1,4 @@
+import discord
 import simplejson as json
 import functions
 from discord.ext import commands
@@ -9,8 +10,8 @@ class Mention(commands.Cog):
 
     @commands.Cog.listener()
     @commands.guild_only()
-    async def on_message(self, message):
-        if "purge" in message:
+    async def on_message(self, message: discord.Message):
+        if "purge" in message.content:
             return
         if self.client.user.mentioned_in(message):
             lang = functions.getLang.getLang(message.guild.id)
@@ -19,7 +20,7 @@ class Mention(commands.Cog):
             with open(f"embeds/{lang}/mentionPrefix.json", "r") as f:
                 msg = json.load(f)
 
-            await message.reply(msg.replace("%VAR", prefix), mention_author=False)
+            await message.reply(msg.replace("%VAR", prefix), mention_author=False, delete_after=20)
 
 
 def setup(client):

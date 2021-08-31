@@ -13,7 +13,7 @@ def get_prefix(client, message):
 
 
 client = commands.Bot(command_prefix=get_prefix)
-
+client.remove_command('help')
 
 # Load commands and events
 for category in os.listdir('commands/'):

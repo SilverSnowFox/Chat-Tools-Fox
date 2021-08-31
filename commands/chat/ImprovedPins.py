@@ -1,7 +1,7 @@
 import datetime
 import discord
 import simplejson as json
-from functions import serverchannels, servermodules, getLang
+from functions import serverchannels, getLang
 from discord.ext import commands
 
 
@@ -20,7 +20,8 @@ class ImprovedPins(commands.Cog):
 
         try:
             # Check that message wasn't pinned and now is, and that ImprovedPins are enabled
-            if not before.pinned and after.pinned and servermodules.getConfig(before.guild.id, "pins_ch"):
+            channel = serverchannels.getChannel(before.guild.id, "pins")
+            if not before.pinned and after.pinned and channel != 0:
 
                 # Check that user set the channel
                 channel = serverchannels.getChannel(before.guild.id, "pins")
@@ -47,7 +48,6 @@ class ImprovedPins(commands.Cog):
                         # Creates and send
                         baseEmbed["description"] = f'{before.content}'
                         await pins_channel.send(embed=discord.Embed.from_dict(baseEmbed))
-                        return
 
                     # 1+ Attachments
                     else:
@@ -120,7 +120,7 @@ class ImprovedPins(commands.Cog):
         except commands.errors.BotMissingPermissions or discord.errors.Forbidden:
             with open(f"embeds/{lang}/improvedPins.json", "r") as f:
                 await before.channel.send(embed=discord.Embed.from_dict(json.load(f)['BotMissingPermissions']))
-        except:
+        except Exception:
             raise Exception
 
 

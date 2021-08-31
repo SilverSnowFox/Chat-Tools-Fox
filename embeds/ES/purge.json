@@ -10,5 +10,10 @@
       "title": "Error",
       "color": 0,
       "description": "Necesitas permiso de `Gestionar Mensajes` para hacer esto."
+   },
+   "UserNotFound": {
+      "title": "Error",
+      "color": 0,
+      "description": "No pude encontrar ese usuario."
    }
 }

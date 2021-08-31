@@ -1,3 +1,6 @@
 manage_channels
 manage_guild
+manage_messages
+manage_webhooks
 webhooks
+read_message_history

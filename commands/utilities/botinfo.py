@@ -38,7 +38,7 @@ class Botinfo(commands.Cog):
             label=botcategories['button'],
             url="https://discord.com/api/oauth2/authorize?client_id=878533674042294292&permissions=8&scope=bot",
             style=ButtonStyle.url
-        )], mention_author=False)
+        )], mention_author=False, delete_after=20)
 
 
 def setup(client):

@@ -1,0 +1,20 @@
+{
+   "Suggestions": "Canal de sugerencias removido.",
+   "Reports": "Canal de reportes ajustado removido.",
+   "ImprovedPins": "Canal de improved pins removido.",
+   "InvalidCategory": {
+      "title": "Error",
+      "color": 0,
+      "description": "Las categorias son:\n¬ `suggestions` (sugerencias)\n¬ `reports` (reportes)\n¬ improved-pins"
+   },
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "Falta un argumento: `remove <categoria>`"
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Gestionar Servidor` para hacer esto."
+   }
+}

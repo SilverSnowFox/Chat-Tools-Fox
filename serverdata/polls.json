@@ -14,5 +14,26 @@
         },
         "voters": {},
         "question": "Hola"
+    },
+    "882063528440262696": {
+        "answers": {
+            "arg0": {
+                "emote": ":one:",
+                "option": "Part A",
+                "count": 0
+            },
+            "arg1": {
+                "emote": ":two:",
+                "option": "Part B",
+                "count": 0
+            },
+            "arg2": {
+                "emote": ":three:",
+                "option": "Part C",
+                "count": 0
+            }
+        },
+        "voters": {},
+        "question": "This is a quest"
     }
 }

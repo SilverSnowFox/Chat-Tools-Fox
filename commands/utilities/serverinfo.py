@@ -32,7 +32,7 @@ class Serverinfo(commands.Cog):
         embed.add_field(name=listItems[10], value=guild.verification_level, inline=True)
         embed.set_thumbnail(url=guild.icon_url)
 
-        await ctx.reply(embed=embed, mention_author=False)
+        await ctx.reply(embed=embed, mention_author=False, delete_after=30)
 
 
 def setup(client):

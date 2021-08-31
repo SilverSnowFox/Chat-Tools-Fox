@@ -1,3 +1,4 @@
+import time
 import discord
 import functions
 import json
@@ -18,7 +19,7 @@ class Report(commands.Cog):
         try:
             # Just to make sure that the sure sent at least text or an image
             if report == "" and len(ctx.message.attachments) == 0:
-                await ctx.reply(embed=discord.Embed.from_dict(reportData["MissingRequiredArgument"]))
+                await ctx.reply(embed=discord.Embed.from_dict(reportData["MissingRequiredArgument"]), delete_after=20)
                 return
 
             # Get suggestion channel
@@ -44,16 +45,21 @@ class Report(commands.Cog):
 
         # No set channel
         except commands.errors.CommandInvokeError:
-            await ctx.reply(embed=discord.Embed.from_dict(reportData["CommandInvokeError"]))
+            await ctx.reply(embed=discord.Embed.from_dict(reportData["CommandInvokeError"]), delete_after=20)
             await ctx.message.delete()
         except commands.errors.BotMissingPermissions:
-            await ctx.reply(embed=discord.Embed.from_dict(reportData["BotMissingPermissions"]))
+            await ctx.reply(embed=discord.Embed.from_dict(reportData["BotMissingPermissions"]), delete_after=20)
             await ctx.message.delete()
 
     @report.error
     async def report_error(self, ctx, error):
-        if isinstance(error, AttributeError):
-            pass
+        if isinstance(error, commands.errors.CommandInvokeError):
+            lang = functions.getLang.getLang(ctx.guild.id)
+            with open(f"embeds/{lang}/report.json", "r") as f:
+                await ctx.reply(embed=discord.Embed.from_dict(json.load(f)["CommandInvokeError"]), delete_after=20)
+                await ctx.message.delete()
+        else:
+            raise error
 
 
 def setup(client):

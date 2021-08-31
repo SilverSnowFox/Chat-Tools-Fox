@@ -1,0 +1,22 @@
+{
+   "Title": "Server settings for %VAR",
+   "Moderation": {
+      "name": "Moderation",
+      "value": "Anti-scam : %VAR1\nAnti Ghost-ping : %VAR2\nBetter Message Links : %VAR3"
+   },
+   "Channels": {
+      "name": "Channels",
+      "value": "Improved Pins : %VAR1\nSuggestions : %VAR2\nReports : %VAR3"
+   },
+   "Footer": "To change or add the channels, use `set <category> <channel>`, and `remove <category>` to remove",
+   "Button": {
+      "Scam": "Anti-scam",
+      "Ping": "Ghost-ping",
+      "Link": "Message Links"
+   },
+   "UserMissingPermission": {
+      "title": "Error",
+      "color": 0,
+      "description": "You need `Manage Guild` permissions to do this."
+   }
+}

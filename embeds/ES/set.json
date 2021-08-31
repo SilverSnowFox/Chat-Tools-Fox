@@ -1,0 +1,20 @@
+{
+   "Suggestions": "Canal de sugerencias ajustado a %VAR",
+   "Reports": "Canal de reportes ajustado a %VAR",
+   "ImprovedPins": "Canal de improved pins ajustado a %VAR",
+   "InvalidCategory": {
+      "title": "Error",
+      "color": 0,
+      "description": "Las categorias son:\n¬ `suggestions` (sugerencias)\n¬ `reports` (reportes)\n¬ improved-pins"
+   },
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "Falta por lo menos un argumento: `set <category> <channel>`"
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Gestionar Servidor` para hacer esto."
+   }
+}

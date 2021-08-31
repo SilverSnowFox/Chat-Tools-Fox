@@ -1,0 +1,20 @@
+{
+   "Suggestions": "Suggestions channel removed.",
+   "Reports": "Reports channel removed.",
+   "ImprovedPins": "Improved Pins channel removed.",
+   "InvalidCategory": {
+      "title": "Error",
+      "color": 0,
+      "description": "Categories are\n¬ suggestions\n¬ reports\n¬ improved-pins"
+   },
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "You are missing an argument: `remove <category>`"
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "You need `Manage Server` permissions to do this."
+   }
+}

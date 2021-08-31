@@ -36,7 +36,7 @@ class InviteList(commands.Cog):
             embed = discord.Embed.from_dict(singleUser)
             embed.set_author(name=f'{user.name}#{user.discriminator} ({user.id})', icon_url=user.avatar_url)
 
-            await ctx.reply(embed=embed, mention_author=False)
+            await ctx.reply(embed=embed, mention_author=False, remove_after=20)
 
         # No user is mentioned
         else:
@@ -45,14 +45,14 @@ class InviteList(commands.Cog):
             allInvites = [f'{i.inviter.name}#{i.inviter.discriminator} ({i.inviter.id}): {i.url}' for i in await ctx.guild.invites()]
             embed.description = "\n".join(allInvites)
 
-            await ctx.reply(embed=embed, mention_author=False)
+            await ctx.reply(embed=embed, mention_author=False, remove_after=20)
 
     @invites.error
     async def invites_error(self, ctx, error):
         if isinstance(error, commands.BotMissingPermissions):
             lang = functions.getLang.getLang(ctx.guild.id)
             with open(f"embeds/{lang}/invitelist.json") as f:
-                await ctx.reply(embed=json.load(f)['BotMissingPermissions'], mention_author=False)
+                await ctx.reply(embed=json.load(f)['BotMissingPermissions'], mention_author=False, remove_after=20)
         else:
             raise error
 

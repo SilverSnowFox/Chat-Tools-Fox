@@ -17,8 +17,8 @@ def getConfig(guild_id: int, module: str) -> bool:
 
 def innitiateGuild(guild_id: int) -> None:
     cursor.execute(f"""
-        INSERT INTO server_modules(guild_id, ghost_ping, anti_scam, msg_links, blacklisting, pins_ch)
-        VALUES ({guild_id}, 1, 1, 1, 0, 0)""")
+        INSERT INTO server_modules(guild_id, ghost_ping, anti_scam, msg_links, blacklisting)
+        VALUES ({guild_id}, 1, 1, 1, 0)""")
     connection.commit()
 
 
@@ -28,7 +28,7 @@ def deleteGuild(guild_id: int) -> None:
         WHERE guild_id = {guild_id}""")
 
 
-def updateModule(guild_id: int, module: str, update:bool) -> None:
+def updateModule(guild_id: int, module: str, update: bool) -> None:
     cursor.execute(f"""
         UPDATE server_modules
         SET {module} = {int(update)}

@@ -1,12 +1,72 @@
 {
-   "main": {
-      "color": 3974125,
-      "title": "Help Menu",
-      "description": "Use the select menu below to choose your category"
+   "Main": {
+      "Description": "Click on the buttons below to select the category of commands.",
+      "Servers": "Servers",
+      "Latency": "Latency",
+      "Users": "Users",
+      "Title": "Help"
    },
-   "utilities": {
+   "Utilities": {
+      "title": "Help - Utilities",
       "color": 3974125,
-      "title": "Help Menu - Utilities",
-      "description": ""
+      "description": "For commands, `<>` mean required and `[]` are optional.\n\n`Invites [@user]` - Sends a list of the top 25 invites or a list of the user's invites.\n`Botinfo` - Sends an embed with my information.\n`Invite` - Sends an embed with buttons to invite me to your servers.\n`@me` - If you mention me, I'll reply with the server's prefix.\n`Serverinfo` - Sends an embed with the server's information.\n`Voting` - You can support me by voting too!\n`Userinfo [@user]` - Sends an embed with the user's information. If you don't mention a user, it sends one with your information.\n`Poll <question$option 1$option 2$...>` - A poll command that allows between 2 and 10 options separated by '$'. A user can only have one vote."
+   },
+   "Modules": {
+      "title": "Help - Modules",
+      "color": 3974125,
+      "description": "Explanation on the modules. Use `settings` to check the server's settings.",
+      "fields": [
+        {
+          "name": "Improved Pins",
+          "value": "When a user pins a message, I will send the message to the set pins channel as an embed, together with the files, and unpin it to avoid reaching the pin limit.",
+          "inline": true
+        },
+        {
+          "name": "Message Links",
+          "value": "When a user sends the link to a message I can access, I will display the contents of the message and its author.",
+          "inline": true
+        },
+        {
+          "name": "Anti-Scam",
+          "value": "If a user sends a link to a scam registered in my database, I will delete that message.",
+          "inline": true
+        },
+        {
+          "name": "Anti-Ghost Ping",
+          "value": "Ever wanted to know who was it that mentioned you and deleted the message? If they do, I will send a message with who was mentioned.",
+          "inline": true
+        }
+      ],
+      "footer": {
+        "text": "To change the settings for the modules, please refer to the Admin help page!"
+      }
+   },
+   "Admin": {
+      "title": "Help - Admin",
+      "color": 3974125,
+      "description": "For commands, `<>` mean required and `[]` are optional.\n\n`Prefix <prefix>` - Changes the bot prefix to an argument between 1 and 10 characters.\n`Lang` - To change the bot language.\n`Settings` - Displays the server's module settings and allows to disable or enable the moderation modules.\n`Purge <number> [@user]` - Deletes the 'number' of messages. If a user is mentioned, it deletes 'number' messages of that user.\n`Set <category> <channel>` - Set the channel for suggestions, reports or ImprovedPins.\n`Remove <category>` - Removes the channel for suggestions, reports or ImprovedPins."
+   },
+   "Main-ActionRow": {
+      "type": 1,
+      "components": [
+         {
+            "type": 2,
+            "label": "Utilities",
+            "style": 1,
+            "custom_id": "Utilities"
+         },
+         {
+            "type": 2,
+            "label": "Modules",
+            "style": 1,
+            "custom_id": "Modules"
+         },
+         {
+            "type": 2,
+            "label": "Admin",
+            "style": 1,
+            "custom_id": "Admin"
+         }
+      ]
    }
 }

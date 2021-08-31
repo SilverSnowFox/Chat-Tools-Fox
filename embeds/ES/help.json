@@ -1,0 +1,72 @@
+{
+   "Main": {
+      "Description": "Clickea el bot\u00FAn para seleccionar la categor\u00EDa de comandos.",
+      "Servers": "Servidores",
+      "Latency": "Latencia",
+      "Users": "Usuarios",
+      "Title": "Ayuda"
+   },
+   "Utilities": {
+      "title": "Ayuda - Utilidades",
+      "color": 3974125,
+      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Invites [@user]` - Env\u00EDa una lista de las top 25 invitaciones o la lista de las invitaciones del usuario.\n`Botinfo` - Env\u00EDa un embed con mi informaci\u00EDn.\n`Invite` - Env\u00EDa un embed con botones para invitarme a tus servidores.\n`@me` - Si me mencionas, te responder\u00E9 con el prefix del servidor.\n`Serverinfo` - Env\u00EDa un embed con la informaci\u00EDn del servidor.\n`Voting` - Me puedes soportar votando!\n`Userinfo [@user]` - Env\u00EDa un embed con la informaci\u00EDn del usuario. Si no mencionas a nadie, env\u00EDo tu informaci\u00EDn.\n`Poll <pregunta$opci\u00F3n 1$opci\u00F3n 2$...>` - Env\u00EDa una encuesta con entre 2 y 10 opciones separadas por '$'. Cada usario solo puede votar una vez."
+   },
+   "Modules": {
+      "title": "Ayuda - Modulos",
+      "color": 3974125,
+      "description": "Explicaci\u00F3n de los modulos. Usa `settings` para mostrar las configuraciones.",
+      "fields": [
+        {
+          "name": "Improved Pins",
+          "value": "Cuando un usuario fija un mensaje, enviare un mensaje al canal configurado como un embed y retirare el mensaje para evitar llegar al limite de fijaciones.",
+          "inline": true
+        },
+        {
+          "name": "Message Links",
+          "value": "Cuando un usuario env\u00EDa el link a un mensaje que puedo ver, enviare el contenido y autor del mensaje.",
+          "inline": true
+        },
+        {
+          "name": "Anti-Scam",
+          "value": "Si un usuario env\u00EDa el link a un scam que tenga yo en mi database, borrar\u00F3 ese mensaje.",
+          "inline": true
+        },
+        {
+          "name": "Anti-Ghost Ping",
+          "value": "Alguna vez has querido ver quien te mencion\u00F3 en un mensaje que luego borro? Si lo hacen, enviare un mensaje con menciones de ese mensaje.",
+          "inline": true
+        }
+      ],
+      "footer": {
+        "text": "Para cambiar las configuraciones de los modulos, chequa la p\u00E1gina de 'Admin'!"
+      }
+   },
+   "Admin": {
+      "title": "Ayuda - Admin",
+      "color": 3974125,
+      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Prefix <prefix>` - Cambia el prefix del bot a un argumento entre 1 y 10 car\u00E1cteres.\n`Lang` - Cambia el idioma del bot.\n`Settings` -  Muestra las configuraciones de los modulos en el servidor, y permite habilitar o deshabilitar ciertos modulos.\n`Purge <numero> [@user]` - Borra 'numero' mensajes. Si mencionas a un usuario, solo borra 'numero' mensajes de ese usuario.\n`Set <categoria> <canal>` - Establece el canal para sugerencias, reportes o Improved Pins.\n`Remove <categoria>` - Remuve el canal para sugerencias, reportes o Improved Pins."
+   },
+   "Main-ActionRow": {
+      "type": 1,
+      "components": [
+         {
+            "type": 2,
+            "label": "Utilidades",
+            "style": 1,
+            "custom_id": "Utilities"
+         },
+         {
+            "type": 2,
+            "label": "Modulos",
+            "style": 1,
+            "custom_id": "Modules"
+         },
+         {
+            "type": 2,
+            "label": "Admin",
+            "style": 1,
+            "custom_id": "Admin"
+         }
+      ]
+   }
+}

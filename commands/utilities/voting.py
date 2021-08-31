@@ -28,7 +28,7 @@ class Vote(commands.Cog):
         await msg.edit(embed=embed, components=[ActionRow(
             Button(label="Top.gg", url="https://bit.do/YeetYeet", style=ButtonStyle.url),
             Button(label="DisBotList.xyz", url="https://bit.do/YeetYeet", style=ButtonStyle.url),
-        ).disable_all_buttons()], mention_author=False)
+        ).disable_all_buttons()], mention_author=False, delete_after=90)
 
 
 def setup(client):

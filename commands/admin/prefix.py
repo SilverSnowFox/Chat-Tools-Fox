@@ -16,7 +16,7 @@ class Prefix(commands.Cog):
 
         if len(prefix) > 10:
             with open(f"embeds/{lang}/prefix.json", "r") as f:
-                await ctx.send(embed=discord.Embed.from_dict(json.load(f)['len-error']))
+                await ctx.reply(embed=discord.Embed.from_dict(json.load(f)['len-error']), delete_after=20)
 
         # Change prefix
         with open('serverconfig/prefixes.json', 'r') as f:
@@ -31,7 +31,7 @@ class Prefix(commands.Cog):
             embed = json.load(f)['embed']
 
         embed['description'].replace("%VAR", prefix)
-        await ctx.reply(embed=discord.Embed.from_dict(embed), mention_author=False)
+        await ctx.reply(embed=discord.Embed.from_dict(embed), mention_author=False, delete_after=20)
 
     @prefix.error
     async def prefix_error(self, ctx, error):
@@ -41,11 +41,11 @@ class Prefix(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             with open(f"embeds/{lang}/prefix.json", "r") as f:
                 errors = json.load(f)
-            await ctx.reply(embed=discord.Embed.from_dict(errors['MissingPermissions']), mention_author=False)
+            await ctx.reply(embed=discord.Embed.from_dict(errors['MissingPermissions']), mention_author=False, delete_after=20)
         elif isinstance(error, commands.MissingRequiredArgument):
             with open(f"embeds/{lang}/prefix.json", "r") as f:
                 errors = json.load(f)
-            await ctx.reply(embed=discord.Embed.from_dict(errors['MissingRequiredArgument']), mention_author=False)
+            await ctx.reply(embed=discord.Embed.from_dict(errors['MissingRequiredArgument']), mention_author=False, delete_after=20)
         else:
             raise error
 

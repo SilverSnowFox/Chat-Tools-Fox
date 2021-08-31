@@ -39,13 +39,21 @@ class Purge(commands.Cog):
         lang = functions.getLang.getLang(ctx.guild.id)
         if isinstance(error, commands.errors.BotMissingPermissions):
             with open(f"embeds/{lang}/purge.json") as f:
-                await ctx.reply(embed=discord.Embed.from_dict(json.load(f)['BotMissingPermissions']), mention_author=False)
+                await ctx.reply(embed=discord.Embed.from_dict(json.load(f)['BotMissingPermissions']),
+                                mention_author=False,
+                                delete_after=20)
 
         elif isinstance(error, commands.errors.MissingPermissions):
             with open(f"embeds/{lang}/purge.json") as f:
                 await ctx.reply(embed=discord.Embed.from_dict(json.load(f)['MissingPermissions']),
-                                mention_author=False)
+                                mention_author=False,
+                                delete_after=20)
 
+        elif isinstance(error, commands.errors.UserNotFound):
+            with open(f"embeds/{lang}/purge.json") as f:
+                await ctx.reply(embed=discord.Embed.from_dict(json.load(f)['UserNotFound']),
+                                mention_author=False,
+                                delete_after=20)
 
 
 

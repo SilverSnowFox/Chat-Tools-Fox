@@ -1,0 +1,22 @@
+{
+   "Title": "Configuraciones de servidor de %VAR",
+   "Moderation": {
+      "name": "Moderation",
+      "value": "Anti-scam : %VAR1\nAnti Ping Fantasma : %VAR2\nMejor Links de Mensaje : %VAR3"
+   },
+   "Channels": {
+      "name": "Canales",
+      "value": "Improved Pins : %VAR1\nSugerencias : %VAR2\nReportes : %VAR3"
+   },
+   "Footer": "Para cambiar o adicionar los canales, usa `set <categoria> <canal>`, y `remove <categoria>` para remover.",
+   "Button": {
+      "Scam": "Anti-scam",
+      "Ping": "Ping fantasma",
+      "Link": "Mejor Links de Mensaje"
+   },
+   "UserMissingPermission": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Gestionar Servidor` para hacer esto."
+   }
+}

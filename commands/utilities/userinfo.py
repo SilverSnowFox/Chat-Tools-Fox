@@ -32,14 +32,14 @@ class Userinfo(commands.Cog):
             embed.add_field(name=listItems[7], value=" ".join([f'<@&{role.id}>' for role in user.roles]), inline=False)
         embed.set_thumbnail(url=user.avatar_url)
 
-        await ctx.reply(embed=embed, mention_author=False)
+        await ctx.reply(embed=embed, mention_author=False, delete_after=30)
 
     @userinfo.error
     async def userinfo_error(self, ctx, error):
         lang = getLang(ctx.message.guild.id)
         if isinstance(error, commands.errors.MemberNotFound):
             with open(f"embeds/{lang}/userinfo.json", "r") as f:
-                await ctx.reply(embed=discord.Embed.from_dict(json.load(f)['MemberNotFound']), mention_author=False)
+                await ctx.reply(embed=discord.Embed.from_dict(json.load(f)['MemberNotFound']), mention_author=False, delete_after=20)
         else:
             raise error
 

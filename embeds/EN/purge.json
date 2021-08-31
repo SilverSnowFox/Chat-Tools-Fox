@@ -10,5 +10,10 @@
       "title": "Error",
       "color": 0,
       "description": "You need `Manage Messages` permissions to do this."
+   },
+   "UserNotFound": {
+      "title": "Error",
+      "color": 0,
+      "description": "I couldn't find that user."
    }
 }

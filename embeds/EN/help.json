@@ -9,7 +9,7 @@
    "Utilities": {
       "title": "Help - Utilities",
       "color": 3974125,
-      "description": "For commands, `<>` mean required and `[]` are optional.\n\n`Invites [@user]` - Sends a list of the top 25 invites or a list of the user's invites.\n`Botinfo` - Sends an embed with my information.\n`Invite` - Sends an embed with buttons to invite me to your servers.\n`@me` - If you mention me, I'll reply with the server's prefix.\n`Serverinfo` - Sends an embed with the server's information.\n`Voting` - You can support me by voting too!\n`Userinfo [@user]` - Sends an embed with the user's information. If you don't mention a user, it sends one with your information.\n`Poll <question$option 1$option 2$...>` - A poll command that allows between 2 and 10 options separated by '$'. A user can only have one vote."
+      "description": "For commands, `<>` mean required and `[]` are optional.\n\n`Invites [@user]` - Sends a list of the top 25 invites or a list of the user's invites.\n`Botinfo` - Sends an embed with my information.\n`Invite` - Sends an embed with buttons to invite me to your servers.\n`@me` - If you mention me, I'll reply with the server's prefix.\n`Serverinfo` - Sends an embed with the server's information.\n`Vote` - You can support me by voting too!\n`Userinfo [@user]` - Sends an embed with the user's information. If you don't mention a user, it sends one with your information.\n`Poll <question$option 1$option 2$...>` - A poll command that allows between 2 and 10 options separated by '$'. A user can only have one vote."
    },
    "Modules": {
       "title": "Help - Modules",

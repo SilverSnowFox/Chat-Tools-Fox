@@ -31,7 +31,8 @@ class msgLink(commands.Cog):
                 if webhook is None:
                     webhook = await message.channel.create_webhook(name="Curse Fox")
 
-                await webhook.send(content, username=message.author.display_name, avatar_url=message.author.avatar_url)
+                if content != "":
+                    await webhook.send(content, username=message.author.display_name, avatar_url=message.author.avatar_url)
 
                 # Attachments if user sent a text
                 for im in message.attachments:

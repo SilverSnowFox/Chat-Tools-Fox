@@ -19,7 +19,7 @@ class Invite(commands.Cog):
         await ctx.reply(embed=discord.Embed.from_dict(inviting[0]), components=[
             ActionRow(
                 Button(label=inviting[1],
-                       url="https://discord.com/api/oauth2/authorize?client_id=872273124060704799&permissions=537259248&scope=bot",
+                       url="https://discord.com/api/oauth2/authorize?client_id=878533674042294292&permissions=537259248&scope=bot",
                        style=ButtonStyle.url
                        ),
                 Button(label=inviting[2],

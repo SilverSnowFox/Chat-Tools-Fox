@@ -9,7 +9,7 @@
    "Utilities": {
       "title": "Ayuda - Utilidades",
       "color": 3974125,
-      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Invites [@user]` - Env\u00EDa una lista de las top 25 invitaciones o la lista de las invitaciones del usuario.\n`Botinfo` - Env\u00EDa un embed con mi informaci\u00EDn.\n`Invite` - Env\u00EDa un embed con botones para invitarme a tus servidores.\n`@me` - Si me mencionas, te responder\u00E9 con el prefix del servidor.\n`Serverinfo` - Env\u00EDa un embed con la informaci\u00EDn del servidor.\n`Voting` - Me puedes soportar votando!\n`Userinfo [@user]` - Env\u00EDa un embed con la informaci\u00EDn del usuario. Si no mencionas a nadie, env\u00EDo tu informaci\u00EDn.\n`Poll <pregunta$opci\u00F3n 1$opci\u00F3n 2$...>` - Env\u00EDa una encuesta con entre 2 y 10 opciones separadas por '$'. Cada usario solo puede votar una vez."
+      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Invites [@user]` - Env\u00EDa una lista de las top 25 invitaciones o la lista de las invitaciones del usuario.\n`Botinfo` - Env\u00EDa un embed con mi informaci\u00EDn.\n`Invite` - Env\u00EDa un embed con botones para invitarme a tus servidores.\n`@me` - Si me mencionas, te responder\u00E9 con el prefix del servidor.\n`Serverinfo` - Env\u00EDa un embed con la informaci\u00EDn del servidor.\n`Vote` - Me puedes soportar votando!\n`Userinfo [@user]` - Env\u00EDa un embed con la informaci\u00EDn del usuario. Si no mencionas a nadie, env\u00EDo tu informaci\u00EDn.\n`Poll <pregunta$opci\u00F3n 1$opci\u00F3n 2$...>` - Env\u00EDa una encuesta con entre 2 y 10 opciones separadas por '$'. Cada usario solo puede votar una vez."
    },
    "Modules": {
       "title": "Ayuda - Modulos",

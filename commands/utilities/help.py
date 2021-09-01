@@ -22,7 +22,7 @@ class Help(commands.Cog):
         helpEmbed.set_thumbnail(url=self.client.user.avatar_url)
         helpEmbed.add_field(name=helpData['Main']['Servers'], value=f"{len(self.client.guilds)}", inline=True)
         helpEmbed.add_field(name=helpData['Main']['Latency'], value=f"{round(self.client.latency * 1000)} ms", inline=True)
-        helpEmbed.add_field(name=helpData['Main']['Users'], value=f"{sum([len(guild.members) for guild in self.client.guilds])}", inline=True)
+        helpEmbed.add_field(name=helpData['Main']['Users'], value=f"{sum([guild.member_count for guild in self.client.guilds])}", inline=True)
 
         await ctx.reply(embed=helpEmbed, components=[
             ActionRow().from_dict(helpData['Main-ActionRow'])

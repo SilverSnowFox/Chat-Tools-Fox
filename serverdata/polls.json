@@ -35,5 +35,23 @@
         },
         "voters": {},
         "question": "This is a quest"
+    },
+    "882461428362133515": {
+        "answers": {
+            "arg0": {
+                "emote": ":one:",
+                "option": "yes ",
+                "count": 1
+            },
+            "arg1": {
+                "emote": ":two:",
+                "option": "no",
+                "count": 0
+            }
+        },
+        "voters": {
+            "587517896133967884": "arg0"
+        },
+        "question": "Ela loves me"
     }
 }

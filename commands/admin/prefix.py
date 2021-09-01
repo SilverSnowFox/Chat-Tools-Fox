@@ -30,7 +30,7 @@ class Prefix(commands.Cog):
         with open(f"embeds/{lang}/prefix.json", "r") as f:
             embed = json.load(f)['embed']
 
-        embed['description'].replace("%VAR", prefix)
+        embed['description'] = embed['description'].replace("%VAR", prefix)
         await ctx.reply(embed=discord.Embed.from_dict(embed), mention_author=False, delete_after=20)
 
     @prefix.error

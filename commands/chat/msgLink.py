@@ -52,6 +52,8 @@ class msgLink(commands.Cog):
 
                         await webhook.send(embed=embed, username=message.author.display_name, avatar_url=message.author.avatar_url)
 
+                    await message.delete()
+
         except commands.BotMissingPermissions or discord.errors.Forbidden:
             lang = functions.getLang.getLang(message.guild.id)
             with open(f"embeds/{lang}/msgLink.json", "r") as f:

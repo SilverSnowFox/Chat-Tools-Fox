@@ -12,9 +12,9 @@
       "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Invites [@user]` - Env\u00EDa una lista de las top 25 invitaciones o la lista de las invitaciones del usuario.\n`Botinfo` - Env\u00EDa un embed con mi informaci\u00EDn.\n`Invite` - Env\u00EDa un embed con botones para invitarme a tus servidores.\n`@me` - Si me mencionas, te responder\u00E9 con el prefix del servidor.\n`Serverinfo` - Env\u00EDa un embed con la informaci\u00EDn del servidor.\n`Vote` - Me puedes soportar votando!\n`Userinfo [@user]` - Env\u00EDa un embed con la informaci\u00EDn del usuario. Si no mencionas a nadie, env\u00EDo tu informaci\u00EDn.\n`Poll <pregunta$opci\u00F3n 1$opci\u00F3n 2$...>` - Env\u00EDa una encuesta con entre 2 y 10 opciones separadas por '$'. Cada usario solo puede votar una vez."
    },
    "Modules": {
-      "title": "Ayuda - Modulos",
+      "title": "Ayuda - M\u00F3dulos",
       "color": 3974125,
-      "description": "Explicaci\u00F3n de los modulos. Usa `settings` para mostrar las configuraciones.",
+      "description": "Explicaci\u00F3n de los m\u00f3dulos. Usa `settings` para mostrar las configuraciones.",
       "fields": [
         {
           "name": "Improved Pins",
@@ -44,7 +44,7 @@
    "Admin": {
       "title": "Ayuda - Admin",
       "color": 3974125,
-      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Prefix <prefix>` - Cambia el prefix del bot a un argumento entre 1 y 10 car\u00E1cteres.\n`Lang` - Cambia el idioma del bot.\n`Settings` -  Muestra las configuraciones de los m\u00E1dulos en el servidor, y permite habilitar o deshabilitar ciertos modulos.\n`Purge <n\u00FAmero> [@user]` - Borra 'n\u00FAmero' mensajes. Si mencionas a un usuario, solo borra 'n\u00FAmero' mensajes de ese usuario.\n`Set <categor\u00EDa> <canal>` - Establece el canal para sugerencias, reportes o Improved Pins.\n`Remove <categor\u00EDa>` - Remueve el canal para sugerencias, reportes o Improved Pins."
+      "description": "Para comandos, `<>` significa requerido y `[]` opcional.\n\n`Prefix <prefix>` - Cambia el prefix del bot a un argumento entre 1 y 10 car\u00E1cteres.\n`Lang` - Cambia el idioma del bot.\n`Settings` -  Muestra las configuraciones de los m\u00F3dulos en el servidor, y permite habilitar o deshabilitar ciertos modulos.\n`Purge <n\u00FAmero> [@user]` - Borra 'n\u00FAmero' mensajes. Si mencionas a un usuario, solo borra 'n\u00FAmero' mensajes de ese usuario.\n`Set <categor\u00EDa> <canal>` - Establece el canal para sugerencias, reportes o Improved Pins.\n`Remove <categor\u00EDa>` - Remueve el canal para sugerencias, reportes o Improved Pins."
    },
    "Main-ActionRow": {
       "type": 1,

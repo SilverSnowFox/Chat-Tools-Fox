@@ -11,6 +11,7 @@ class Prefix(commands.Cog):
     @commands.command(aliases=["Prefix"], no_pm=True)
     @commands.has_permissions(manage_guild=True)
     async def prefix(self, ctx, prefix):
+        """Changes the guild prefix"""
         # Get the server language
         lang = getLang(ctx.message.guild.id)
 

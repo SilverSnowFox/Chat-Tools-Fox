@@ -10,6 +10,7 @@ class Userinfo(commands.Cog):
 
     @commands.command(aliases=["Userinfo", "user", "User"])
     async def userinfo(self, ctx, user: discord.Member = None):
+        """Returns an embed with the member's information"""
         lang = getLang(ctx.message.guild.id)
 
         if user is None:

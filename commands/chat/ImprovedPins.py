@@ -12,11 +12,12 @@ class ImprovedPins(commands.Cog):
     @commands.Cog.listener()
     @commands.bot_has_permissions(manage_messages=True, manage_webhooks=True)
     async def on_message_edit(self, before, after):
+        """Event when a user pins a message"""
         lang = getLang.getLang(before.guild.id)
 
         # No PM
-        if before.guild is None:
-            return
+        if before.guild is None or before.pinned == after.pinned:
+            return 0
 
         try:
             # Check that message wasn't pinned and now is, and that ImprovedPins are enabled

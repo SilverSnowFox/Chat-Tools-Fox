@@ -1,0 +1,24 @@
+{
+   "Join": {
+      "Colour": 47872,
+      "Title": "User Joined"
+   },
+   "Leave": {
+      "Colour": 13500416,
+      "Title": "User Left"
+   },
+   "Update": {
+      "Colour": 156,
+      "Title": "User Update",
+      "Before": "Before",
+      "After": "After"
+   },
+   "Ban": {
+      "Colour": 13500416,
+      "Title": "User Banned"
+   },
+   "Unban": {
+      "Colour": 8161156,
+      "Title": "User Unbanned"
+   }
+}

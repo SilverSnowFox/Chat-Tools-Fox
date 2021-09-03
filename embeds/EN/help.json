@@ -44,7 +44,7 @@
    "Admin": {
       "title": "Help - Admin",
       "color": 3974125,
-      "description": "For commands, `<>` mean required and `[]` are optional.\n\n`Prefix <prefix>` - Changes the bot prefix to an argument between 1 and 10 characters.\n`Lang` - To change the bot language.\n`Settings` - Displays the server's module settings and allows to disable or enable the moderation modules.\n`Purge <number> [@user]` - Deletes the 'number' of messages. If a user is mentioned, it deletes 'number' messages of that user.\n`Set <category> <channel>` - Set the channel for suggestions, reports or Improved Pins.\n`Remove <category>` - Removes the channel for suggestions, reports or Improved Pins."
+      "description": "For commands, `<>` mean required and `[]` are optional.\n\n`Prefix <prefix>` - Changes the bot prefix to an argument between 1 and 10 characters.\n`Lang` - To change the bot language.\n`Settings` - Displays the server's module settings and allows to disable or enable the moderation modules.\n`Purge <number> [@user]` - Deletes the 'number' of messages. If a user is mentioned, it deletes 'number' messages of that user.\n`Set <category> <channel>` - Set the channel for suggestions, reports or Improved Pins.\n`Remove <category>` - Removes the channel for suggestions, reports or Improved Pins.\n`Log <type> <channel>` - Sets up the log channel for the type. use `Log types` for the list of log types.\n`Show-logs` - Shows the channels the logs are set-up to."
    },
    "Main-ActionRow": {
       "type": 1,

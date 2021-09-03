@@ -12,6 +12,7 @@ class Report(commands.Cog):
     @commands.command(aliases=["Report"], no_pm=True)
     @commands.bot_has_permissions(manage_messages=True)
     async def report(self, ctx, *, report=""):
+        """Command when user sends a report"""
         lang = functions.getLang.getLang(ctx.guild.id)
         with open(f"embeds/{lang}/report.json", "r") as f:
             reportData = json.load(f)

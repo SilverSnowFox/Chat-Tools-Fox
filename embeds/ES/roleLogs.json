@@ -1,0 +1,14 @@
+{
+   "Create": {
+      "Colour": 47872,
+      "Title": "Rol creado"
+   },
+   "Delete": {
+      "Colour": 13500416,
+      "Title": "Rol Borrado"
+   },
+   "Update": {
+      "Colour": 156,
+      "Title": "Rol Actualizado"
+   }
+}

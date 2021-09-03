@@ -11,7 +11,7 @@ class Poll(commands.Cog):
 
     @commands.command(aliases=["Poll"], pass_context=True)
     async def poll(self, ctx, *, args):
-
+        """Creates a poll with between 2 and 10 options"""
         # Splits arguments in list items through separator $, where index 0 is the question
         arguments = args.split('$')
 

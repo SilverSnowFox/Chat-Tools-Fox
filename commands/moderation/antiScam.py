@@ -1,7 +1,8 @@
 import discord
 import simplejson as json
-import functions
 from discord.ext import commands
+
+import functions.serverlogs
 from functions import servermodules, getLang
 
 
@@ -12,7 +13,7 @@ class Scamlink(commands.Cog):
     @commands.Cog.listener()
     @commands.bot_has_permissions(manage_messages=True)
     async def on_message(self, message):
-
+        """Module against scams"""
         # No PM and check the module is enabled
         if message.guild is None or not servermodules.getConfig(message.guild.id, "anti_scam"):
             return
@@ -32,7 +33,14 @@ class Scamlink(commands.Cog):
                     embed['description'] = embed['description'].replace("%VAR", message.author.mention)
                     await message.channel.send(embed=discord.Embed.from_dict(embed))
                     await message.delete()
+
+                    logChannel = self.client.get_channel(functions.serverlogs.getChannel(message.guild.id, "scam"))
+                    if logChannel is not None:
+                        logEmbed = discord.Embed.from_dict(embed)
+                        logEmbed.add_field(name=scamData['Field'], value=message.content)
+                        await logChannel.send(embed=logEmbed)
                     break
+
         except commands.errors.BotMissingPermissions:
             await message.channel.send(embed=discord.Embed.from_dict(scamData['BotMissingPermissions']))
         except:

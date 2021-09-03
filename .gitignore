@@ -10,3 +10,4 @@ commands/moderation/__pycache__
 commands/reporting/__pycache__
 commands/suggestions/__pycache__
 commands/errors/__pycache__
+commands/logging/__pycache__

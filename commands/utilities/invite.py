@@ -11,6 +11,7 @@ class Invite(commands.Cog):
 
     @commands.command(aliases=["Invite"])
     async def invite(self, ctx):
+        """Sends embed with buttons to invite the bot"""
         lang = getLang(ctx.message.guild.id)
 
         with open(f"embeds/{lang}/inviting.json", "r") as f:

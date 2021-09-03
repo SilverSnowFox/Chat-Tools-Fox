@@ -1,0 +1,50 @@
+{
+   "Types": {
+      "title": "Logging types",
+      "color": 3974125,
+      "description": "`messages` - Logs message events such as editing, deleting and pinning.\n`channels` - Logs channel events such as creating, deleting and updating.\n`users` - Logs user joining, leaving, banning, unbanning, and updating (kicked counts as leaving).\n`roles` - Logs role creating, deleting and updating.\n`scam` - Logs the suspected scams if the scam module is activated.\n`all` - Logs everything onto that channel."
+   },
+   "Messages": {
+      "title": "Log",
+      "description": "Messages logs set to %VAR"
+   },
+   "Channels": {
+      "title": "Log",
+      "description": "Channel logs set to %VAR"
+   },
+   "Users": {
+      "title": "Log",
+      "description": "User logs set to %VAR"
+   },
+   "Roles": {
+      "title": "Log",
+      "description": "Roles logs set to %VAR"
+   },
+   "Scam": {
+      "title": "Log",
+      "description": "Scam logs set to %VAR"
+   },
+   "All": {
+      "title": "Log",
+      "description": "All logs set to %VAR"
+   },
+   "Invalid-type": {
+      "title": "Log",
+      "description": "Invalid type. Use `logs types` to see all types of logging."
+   },
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "You are missing at least 1 required argument: `log <type> <channel>`"
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "You need `Administrator` permissions to set up logging."
+   },
+   "Invalid-channel": {
+      "title": "Error",
+      "color": 0,
+      "description": "Invalid channel. Make sure it is an existent channel or that I can see it."
+   }
+}

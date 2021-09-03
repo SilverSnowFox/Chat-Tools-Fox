@@ -29,9 +29,10 @@ class GuildEvents(commands.Cog):
         # Innitiated guild entries in modules and channels database
         functions.servermodules.innitiateGuild(guild.id)
         functions.serverchannels.innitiateGuild(guild.id)
+        functions.serverlogs.innitiateGuild(guild.id)
 
-        channel = discord.Client.get_channel(self.client, id=880568567702110258)
-        await channel.send(f'Joined {guild.name} ({guild.id})')
+        #channel = discord.Client.get_channel(self.client, id=880568567702110258)
+        #await channel.send(f'Joined {guild.name} ({guild.id})')
 
     # Remove guild from prefix list
     @commands.Cog.listener()
@@ -54,9 +55,10 @@ class GuildEvents(commands.Cog):
         # Removes guild from the databases
         functions.servermodules.deleteGuild(guild.id)
         functions.serverchannels.deleteGuild(guild.id)
+        functions.serverlogs.deleteGuild(guild.id)
 
-        channel = discord.Client.get_channel(self.client, id=880568567702110258)
-        await channel.send(f'Left {guild.name} ({guild.id})')
+        #channel = discord.Client.get_channel(self.client, id=880568567702110258)
+        #await channel.send(f'Left {guild.name} ({guild.id})')
 
 
 def setup(client):

@@ -1,0 +1,7 @@
+{
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "You need `Manage Server` permissions to set up logging."
+   }
+}

@@ -11,6 +11,7 @@ class Set(commands.Cog):
     @commands.command(aliases=["Set"])
     @commands.has_permissions(manage_guild=True)
     async def set(self, ctx, category, channel: discord.TextChannel):
+        """Sets the guild Suggestion, Report or Improved Pins"""
         lang = functions.getLang.getLang(ctx.guild.id)
         with open(f"embeds/{lang}/set.json", "r") as f:
             setData = json.load(f)

@@ -23,6 +23,8 @@ For commands, `<>` mean required and `[]` are optional.
 - `Purge <number> [@user]` - Deletes the 'number' of messages. If a user is mentioned, it deletes 'number' messages of that user.
 - `Set <category> <channel>` - Set the channel for suggestions, reports or Improved Pins.
 - `Remove <category>` - Removes the channel for suggestions, reports or Improved Pins.
+- `Log <type> <channel>` - Sets up the log channel for the type. use `Log types` for the list of log types.
+- `Show-logs` - Shows the channels the logs are set-up to.
 
 ## Modules
 

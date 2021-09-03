@@ -11,6 +11,7 @@ class Remove(commands.Cog):
     @commands.command(aliases=["Remove"])
     @commands.has_permissions(manage_guild=True)
     async def remove(self, ctx, category):
+        """Removes the Suggestion, Report or Improved Pins channel"""
         lang = functions.getLang.getLang(ctx.guild.id)
         with open(f"embeds/{lang}/remove.json", "r") as f:
             setData = json.load(f)

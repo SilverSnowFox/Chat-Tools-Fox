@@ -11,6 +11,7 @@ class Mention(commands.Cog):
     @commands.Cog.listener()
     @commands.guild_only()
     async def on_message(self, message: discord.Message):
+        """Sends a message with the guild's bot prefix"""
         if "purge" in message.content:
             return
         if self.client.user.mentioned_in(message):

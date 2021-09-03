@@ -12,6 +12,7 @@ class Lang(commands.Cog):
     @commands.command(aliases=["Lang"], no_pm=True)
     @commands.has_permissions(manage_guild=True)
     async def lang(self, ctx):
+        """Changes the guild language"""
 
         # Get server language
         with open('serverconfig/lang.json', 'r') as f:

@@ -1,0 +1,7 @@
+{
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Gestionar Servidor` para hacer esto."
+   }
+}

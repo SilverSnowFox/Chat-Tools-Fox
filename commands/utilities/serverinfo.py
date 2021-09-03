@@ -10,6 +10,7 @@ class Serverinfo(commands.Cog):
 
     @commands.command(aliases=["Serverinfo"], no_pm=True)
     async def serverinfo(self, ctx):
+        """Returns an embed with the guild's information"""
         guild = ctx.message.guild
         lang = getLang(guild.id)
 

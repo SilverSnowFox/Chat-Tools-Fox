@@ -1,0 +1,14 @@
+{
+   "Create": {
+      "Colour": 47872,
+      "Title": "Channel created"
+   },
+   "Delete": {
+      "Colour": 13500416,
+      "Title": "Channel Deleted"
+   },
+   "Update": {
+      "Colour": 156,
+      "Title": "Channel Updated"
+   }
+}

@@ -1,0 +1,50 @@
+{
+   "Types": {
+      "title": "Tipos de Logging",
+      "color": 3974125,
+      "description": "`messages` - Registra logs de mensajes como editando, borrando y fijando.\n`channels` - Registra logs de canales como creando, borrando y cambiando.\n`users` - Registra eventos como usuarios uniendose, saliendo del servidor, bans, unbans, y actualizando.\n`roles` - Registra eventos como crear, borrar y editar rols.\n`scam` - Registra el suspechado scam si el modulo de scam esta activado.\n`all` - Registra todo."
+   },
+   "Messages": {
+      "title": "Log",
+      "description": "Logs de mensajes se ha ajustado a %VAR"
+   },
+   "Channels": {
+      "title": "Log",
+      "description": "Logs de canales se ha ajustado a %VAR"
+   },
+   "Users": {
+      "title": "Log",
+      "description": "Logs de usuarios se ha ajustado a %VAR"
+   },
+   "Roles": {
+      "title": "Log",
+      "description": "Logs de roles se ha ajustado a %VAR"
+   },
+   "Scam": {
+      "title": "Log",
+      "description": "Logs de scams se ha ajustado a %VAR"
+   },
+   "All": {
+      "title": "Log",
+      "description": "Todos los logs se ha ajustado a %VAR"
+   },
+   "Invalid-type": {
+      "title": "Log",
+      "description": "Tipo invalido. Usa `logs types` para ver todos los tipos."
+   },
+   "MissingRequiredArgument": {
+      "title": "Error",
+      "color": 0,
+      "description": "Te falta al menos un argumento: `log <type> <channel>`"
+   },
+   "MissingPermissions": {
+      "title": "Error",
+      "color": 0,
+      "description": "Necesitas permiso de `Administrator` para hacer esto."
+   },
+   "Invalid-channel": {
+      "title": "Error",
+      "color": 0,
+      "description": "Canal inv\u00E1lido. Por favor asegurate de escoger un canal v\u00E1lido o que yo pueda ver."
+   }
+}

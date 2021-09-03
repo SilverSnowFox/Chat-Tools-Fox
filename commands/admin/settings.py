@@ -11,6 +11,7 @@ class Settings(commands.Cog):
 
     @commands.command(aliases=["Setings"])
     async def settings(self, ctx):
+        """Displays the guild's settings, and allows change for Anti-Scam, Anti Ghost-ping and Message Links"""
 
         # No PM
         if ctx.guild is None:

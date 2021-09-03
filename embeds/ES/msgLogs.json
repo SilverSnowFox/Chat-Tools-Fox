@@ -1,0 +1,18 @@
+{
+   "Delete": {
+      "Colour": 13500416,
+      "Title": "Mensaje Borrado",
+      "Description": "%VAR1\n%VAR2\n\nBorrado nn %VAR3"
+   },
+   "Edit": {
+      "Colour": 5120,
+      "Title": "Mensaje Editado",
+      "Description": "Antes:\n%VAR1\n%VAR2\n\nDespu\u00E9s:\n%VAR3\n%VAR4\n\nEditado en %VAR5"
+   },
+   "Pinned": {
+      "Colour": 5143,
+      "Title": "Mensaje Fijado",
+      "Description": "%VAR1\n%VAR2\n\nFijado en %VAR3"
+   },
+   "Footer": "[Saltar al mensaje](%VAR)"
+}

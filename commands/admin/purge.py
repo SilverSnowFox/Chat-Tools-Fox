@@ -13,6 +13,7 @@ class Purge(commands.Cog):
     @commands.has_permissions(manage_messages=True)
     @commands.bot_has_permissions(manage_messages=True, read_message_history=True)
     async def purge(self, ctx, number: int, user: discord.Member = None):
+        """Purges messages according to the number, either from all or from one user"""
         lang = functions.getLang.getLang(ctx.guild.id)
         with open(f"embeds/{lang}/purge.json") as f:
             purgeData = json.load(f)

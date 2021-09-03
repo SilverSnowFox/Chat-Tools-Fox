@@ -10,6 +10,7 @@ class Suggest(commands.Cog):
 
     @commands.command(aliases=["Suggest"], no_pm=True)
     async def suggest(self, ctx, *, suggestion=""):
+        """Command when user sends a suggestion"""
         # Gets all text and errors in the right language
         lang = functions.getLang.getLang(ctx.guild.id)
         with open(f"embeds/{lang}/suggestion.json", "r") as f:

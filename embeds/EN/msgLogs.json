@@ -1,0 +1,23 @@
+{
+   "Sent": {
+      "Colour": 23,
+      "Title": "Message Sent",
+      "Description": "%VAR1\n%VAR2\n\nSent in %VAR3"
+   },
+   "Delete": {
+      "Colour": 13500416,
+      "Title": "Message Deleted",
+      "Description": "%VAR1\n%VAR2\n\nDeleted in %VAR3"
+   },
+   "Edit": {
+      "Colour": 5120,
+      "Title": "Message Edited",
+      "Description": "Before:\n%VAR1\n%VAR2\n\nAfter:\n%VAR3\n%VAR4\n\nEdited in %VAR5"
+   },
+   "Pinned": {
+      "Colour": 5143,
+      "Title": "Message Pinned",
+      "Description": "%VAR1\n%VAR2\n\nPinned in %VAR3"
+   },
+   "Footer": "[Jump to message](%VAR)"
+}

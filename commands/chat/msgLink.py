@@ -12,6 +12,7 @@ class msgLink(commands.Cog):
     @commands.Cog.listener()
     @commands.bot_has_permissions(manage_messages=True, manage_webhooks=True)
     async def on_message(self, message):
+        """Event when a user sends at least 1 message link"""
         # No PM, no bot and check that enabled
         if message.guild is None or message.author.bot or not functions.servermodules.getConfig(message.guild.id, "msg_links"):
             return

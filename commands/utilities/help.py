@@ -11,6 +11,7 @@ class Help(commands.Cog):
 
     @commands.command(aliases=["Help"])
     async def help(self, ctx):
+        """Sends a list of the help commands"""
         # Get language
         lang = functions.getLang.getLang(ctx.guild.id)
         with open(f"embeds/{lang}/help.json", "r") as f:

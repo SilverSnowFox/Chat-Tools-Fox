@@ -11,7 +11,11 @@ def get_prefix(client, message):
     return prefixes[str(message.guild.id)]
 
 
-client = commands.Bot(command_prefix=get_prefix)
+intents = discord.Intents.default()
+intents.members = True
+intents.guilds = True
+
+client = commands.Bot(command_prefix=get_prefix, intents=intents)
 client.remove_command('help')
 
 # Load commands and events

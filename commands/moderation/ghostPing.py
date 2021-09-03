@@ -10,6 +10,7 @@ class Ghostping(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message_delete(self, message):
+        """Event when user pings someone else and then deletes ping"""
         # Check that mentions have no bots
         def check_only_bot(m):
             for mention in m.mentions:

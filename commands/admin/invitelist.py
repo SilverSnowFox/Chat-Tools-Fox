@@ -11,6 +11,7 @@ class InviteList(commands.Cog):
     @commands.command(aliases=["invitelist", "Invitelist", "Invites"], no_pm=True)
     @commands.bot_has_permissions(manage_guild=True, manage_channels=True)
     async def invites(self, ctx, user: discord.User = None):
+        """Shows a list of the user or top 25 guild invites"""
 
         # Get language and JSON
         lang = functions.getLang.getLang(ctx.guild.id)

@@ -15,6 +15,7 @@ class Botinfo(commands.Cog):
 
     @commands.command(aliases=["Botinfo"])
     async def botinfo(self, ctx):
+        """Sends the bot information"""
         lang = getLang(ctx.message.guild.id)
 
         with open(f"embeds/{lang}/botinfo.json", "r") as f:
